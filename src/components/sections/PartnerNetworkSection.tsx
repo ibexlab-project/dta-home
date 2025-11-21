@@ -43,7 +43,7 @@ export function PartnerNetworkSection() {
     const partnerLogos = Array.from({ length: 8 }, (_, i) => i + 1);
 
     return (
-        <section id="partners" className="bg-white" style={{ paddingTop: '48px', paddingBottom: '96px' }}>
+        <section id="partners" className="bg-white" style={{ paddingTop: '128px', paddingBottom: '96px', scrollMarginTop: '80px' }}>
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 

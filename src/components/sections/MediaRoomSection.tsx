@@ -38,8 +38,8 @@ export function MediaRoomSection() {
     return (
         <section 
             id="media" 
-            className="pt-8 pb-24"
-            style={{ backgroundColor: '#F9FAFB' }}
+            className="pb-24"
+            style={{ backgroundColor: '#F9FAFB', paddingTop: '128px', scrollMarginTop: '80px' }}
         >
             <div className="container mx-auto px-4">
                 <div className="text-center mb-8">

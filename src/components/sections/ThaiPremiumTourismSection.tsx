@@ -2,7 +2,7 @@ import { Globe2, Target, Heart, Sparkles, Users, CalendarCheck, TrendingUp } fro
 
 export function ThaiPremiumTourismSection() {
     return (
-        <section className="py-24" style={{ backgroundColor: '#F9FAFB' }}>
+        <section id="market-strategy" className="py-24" style={{ backgroundColor: '#F9FAFB' }}>
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="mb-4" style={{ fontSize: '36px' }}>

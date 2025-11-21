@@ -3,7 +3,7 @@ import { FileCheck, CheckCircle, Users, Handshake, TrendingUp, Zap, GitBranch } 
 
 export function InfrastructureSection() {
     return (
-        <section id="ecosystem" className="py-24 bg-white">
+        <section id="core-structure" className="py-24 bg-white">
             <div className="container mx-auto px-4">
                 {/* Ecosystem Architecture Card */}
                 <div className="flex justify-center mb-8">
