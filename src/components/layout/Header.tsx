@@ -21,7 +21,7 @@ export function Header({ locale }: HeaderProps) {
         router.push(newPath);
     };
     return (
-        <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md" style={{ borderBottom: '1px solid #E5E7EB' }}>
+        <header className="sticky top-0 z-50 w-full bg-white" style={{ borderBottom: '1px solid #E5E7EB' }}>
             <div className="container mx-auto flex h-16 items-center justify-between px-4">
                 {/* Logo */}
                 <Link href={`/${currentLang}`} className="flex items-center">
