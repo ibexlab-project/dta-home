@@ -158,7 +158,7 @@ export function ThaiPremiumTourismSection({ locale }: ThaiPremiumTourismSectionP
                                     style={{
                                         color: '#101828',
                                         fontSize: '16px',
-                                        fontWeight: 500
+                                        fontWeight: 600
                                     }}
                                 >
                                     {t.golfTourismTitle}
@@ -200,7 +200,7 @@ export function ThaiPremiumTourismSection({ locale }: ThaiPremiumTourismSectionP
                                     style={{
                                         color: '#101828',
                                         fontSize: '16px',
-                                        fontWeight: 500
+                                        fontWeight: 600
                                     }}
                                 >
                                     {t.medicalWellnessTitle}
@@ -242,7 +242,7 @@ export function ThaiPremiumTourismSection({ locale }: ThaiPremiumTourismSectionP
                                     style={{
                                         color: '#101828',
                                         fontSize: '16px',
-                                        fontWeight: 500
+                                        fontWeight: 600
                                     }}
                                 >
                                     {t.luxuryExperientialTravelTitle}

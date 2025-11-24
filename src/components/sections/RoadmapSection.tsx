@@ -70,17 +70,17 @@ export function RoadmapSection({ locale }: RoadmapSectionProps) {
                         <div className="col-span-6 space-y-2">
                             {t.year2025Highlights.map((highlight, index) => (
                                 <div key={index} className="flex items-start gap-2">
-                                    <div 
-                                        className="shrink-0 rounded-full" 
-                                        style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                    />
-                                    <span 
-                                        className="font-normal"
-                                        style={{ color: '#4A5565', fontSize: '14px' }}
-                                    >
+                                <div 
+                                    className="shrink-0 rounded-full" 
+                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
+                                />
+                                <span 
+                                    className="font-normal"
+                                    style={{ color: '#4A5565', fontSize: '14px' }}
+                                >
                                         {highlight}
-                                    </span>
-                                </div>
+                                </span>
+                            </div>
                             ))}
                         </div>
                     </div>
@@ -102,17 +102,17 @@ export function RoadmapSection({ locale }: RoadmapSectionProps) {
                         <div className="col-span-6 space-y-2">
                             {t.year2026Highlights.map((highlight, index) => (
                                 <div key={index} className="flex items-start gap-2">
-                                    <div 
-                                        className="shrink-0 rounded-full" 
-                                        style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                    />
-                                    <span 
-                                        className="font-normal"
-                                        style={{ color: '#4A5565', fontSize: '14px' }}
-                                    >
+                                <div 
+                                    className="shrink-0 rounded-full" 
+                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
+                                />
+                                <span 
+                                    className="font-normal"
+                                    style={{ color: '#4A5565', fontSize: '14px' }}
+                                >
                                         {highlight}
-                                    </span>
-                                </div>
+                                </span>
+                            </div>
                             ))}
                         </div>
                     </div>
@@ -134,17 +134,17 @@ export function RoadmapSection({ locale }: RoadmapSectionProps) {
                         <div className="col-span-6 space-y-2">
                             {t.year2027Highlights.map((highlight, index) => (
                                 <div key={index} className="flex items-start gap-2">
-                                    <div 
-                                        className="shrink-0 rounded-full" 
-                                        style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                    />
-                                    <span 
-                                        className="font-normal"
-                                        style={{ color: '#4A5565', fontSize: '14px' }}
-                                    >
+                                <div 
+                                    className="shrink-0 rounded-full" 
+                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
+                                />
+                                <span 
+                                    className="font-normal"
+                                    style={{ color: '#4A5565', fontSize: '14px' }}
+                                >
                                         {highlight}
-                                    </span>
-                                </div>
+                                </span>
+                            </div>
                             ))}
                         </div>
                     </div>

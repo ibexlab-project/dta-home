@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Poppins, Noto_Sans_Thai } from "next/font/google";
+import { Inter, Noto_Sans_Thai } from "next/font/google";
 import "../globals.css";
 import { clsx } from "clsx";
 
-const poppins = Poppins({
+const inter = Inter({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-poppins",
+  variable: "--font-inter",
 });
 
 const notoSansThai = Noto_Sans_Thai({
@@ -34,9 +34,9 @@ export default async function LocaleLayout({
     <html lang={lang}>
       <body
         className={clsx(
-          poppins.variable,
+          inter.variable,
           notoSansThai.variable,
-          locale === 'th' ? "font-noto-sans-thai" : "font-poppins",
+          locale === 'th' ? "font-noto-sans-thai" : "font-inter",
           "antialiased min-h-screen flex flex-col"
         )}
       >
