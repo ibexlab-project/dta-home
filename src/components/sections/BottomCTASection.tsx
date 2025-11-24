@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-export function BottomCTASection() {
+import { getTranslations, type Locale } from "@/lib/get-translations";
+
+interface BottomCTASectionProps {
+    locale: Locale;
+}
+
+export function BottomCTASection({ locale }: BottomCTASectionProps) {
+    const t = getTranslations(locale).bottomCTA;
     return (
         <section 
             className="flex items-center"
@@ -16,7 +23,7 @@ export function BottomCTASection() {
                         className="font-normal text-white mb-6"
                         style={{ fontSize: '36px' }}
                     >
-                        Ready to Get Started?
+                        {t.title}
                     </h2>
                     <p 
                         className="mb-10"
@@ -25,7 +32,7 @@ export function BottomCTASection() {
                             color: '#DBEAFE'
                         }}
                     >
-                        Join DTA today and unlock access to Thailand's premium tourism experiences
+                        {t.subtitle}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
@@ -38,14 +45,14 @@ export function BottomCTASection() {
                                 height: '56px'
                             }}
                         >
-                            Connect Wallet
+                            {t.connectWallet}
                             <ArrowRight className="h-4 w-4" style={{ color: '#155DFC' }} />
                         </Link>
                         <Link
                             href="#"
                             className="px-8 py-3 bg-transparent text-white border-2 border-white rounded-full font-medium hover:bg-white/10 transition-colors"
                         >
-                            Learn More
+                            {t.learnMore}
                         </Link>
                     </div>
                 </div>

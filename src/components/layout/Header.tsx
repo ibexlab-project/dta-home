@@ -1,18 +1,37 @@
+'use client';
+
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight, Globe } from "lucide-react";
+import { useRouter, usePathname } from "next/navigation";
 
-export function Header() {
+interface HeaderProps {
+    locale: 'en' | 'th';
+}
+
+export function Header({ locale }: HeaderProps) {
+    const router = useRouter();
+    const pathname = usePathname();
+    const currentLang = pathname.startsWith('/th') ? 'th' : 'en';
+    
+    const handleLanguageChange = (newLang: 'en' | 'th') => {
+        // 현재 경로에서 locale 추출
+        const pathWithoutLocale = pathname.replace(/^\/(en|th)/, '') || '/';
+        const newPath = `/${newLang}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
+        router.push(newPath);
+    };
     return (
         <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md" style={{ borderBottom: '1px solid #E5E7EB' }}>
             <div className="container mx-auto flex h-16 items-center justify-between px-4">
                 {/* Logo */}
-                <Link href="/" className="flex items-center">
+                <Link href={`/${currentLang}`} className="flex items-center">
                     <Image
                         src="/images/logo.png"
                         alt="DTA"
                         width={100}
                         height={40}
                         className="object-contain"
+                        unoptimized
                     />
                 </Link>
 
@@ -64,11 +83,68 @@ export function Header() {
 
                 {/* Actions */}
                 <div className="flex items-center gap-4">
+                    {/* Language Selector */}
+                    <div 
+                        className="flex items-center justify-center rounded-lg border cursor-pointer"
+                        style={{
+                            borderColor: '#E5E7EB',
+                            backgroundColor: '#FFFFFF',
+                            width: '136px',
+                            height: '34px',
+                            gap: '12px',
+                            paddingLeft: '16px',
+                            paddingRight: '12px'
+                        }}
+                    >
+                        <Globe style={{ width: '16px', height: '16px', color: '#4A5565', flexShrink: 0 }} />
+                        <div className="flex items-center gap-1 flex-1 justify-center">
+                            <button
+                                onClick={() => handleLanguageChange('en')}
+                                className="px-3 rounded transition-colors"
+                                style={{
+                                    backgroundColor: currentLang === 'en' ? '#DBEAFE' : 'transparent',
+                                    color: currentLang === 'en' ? '#1447E6' : '#4A5565',
+                                    fontSize: '12px',
+                                    fontWeight: 500,
+                                    paddingTop: '2px',
+                                    paddingBottom: '2px',
+                                    cursor: 'pointer'
+                                }}
+                            >
+                                EN
+                            </button>
+                            <span style={{ color: '#E5E7EB', fontSize: '12px' }}>|</span>
+                            <button
+                                onClick={() => handleLanguageChange('th')}
+                                className="px-3 rounded transition-colors"
+                                style={{
+                                    backgroundColor: currentLang === 'th' ? '#DBEAFE' : 'transparent',
+                                    color: currentLang === 'th' ? '#1447E6' : '#4A5565',
+                                    fontSize: '12px',
+                                    fontWeight: 500,
+                                    paddingTop: '2px',
+                                    paddingBottom: '2px',
+                                    cursor: 'pointer'
+                                }}
+                            >
+                                TH
+                            </button>
+                        </div>
+                    </div>
                     <Link
                         href="#"
-                        className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors"
+                        className="text-white font-medium transition-colors flex items-center justify-center gap-2"
+                        style={{
+                            background: 'linear-gradient(to bottom right, #155DFC, #0092B8)',
+                            borderRadius: '14px',
+                            boxShadow: '0 10px 25px rgba(21, 93, 252, 0.3)',
+                            width: '132px',
+                            height: '36px',
+                            fontSize: '14px',
+                            fontWeight: 500
+                        }}
                     >
-                        Launch App
+                        Get Started <ArrowRight className="h-4 w-4" />
                     </Link>
                 </div>
             </div>

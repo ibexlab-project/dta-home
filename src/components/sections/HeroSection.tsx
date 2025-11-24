@@ -1,7 +1,13 @@
 import { ArrowRight, Handshake, Wallet, Blocks } from "lucide-react";
 import Link from "next/link";
+import { getTranslations, type Locale } from "@/lib/get-translations";
 
-export function HeroSection() {
+interface HeroSectionProps {
+    locale: Locale;
+}
+
+export function HeroSection({ locale }: HeroSectionProps) {
+    const t = getTranslations(locale).hero;
     return (
         <section 
             className="relative pb-32 overflow-hidden"
@@ -17,7 +23,7 @@ export function HeroSection() {
                 {/* Tagline - Blockchain-Powered Tourism Platform */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 text-primary text-sm font-medium mb-6" style={{ backgroundColor: '#BADAF4', border: '1px solid #88C0EB', borderRadius: '18px' }}>
                     <Blocks className="h-4 w-4" style={{ color: '#0279D5' }} />
-                    <span>Blockchain-Powered Tourism Platform</span>
+                    <span>{t.tagline}</span>
                 </div>
 
                 {/* Headline */}
@@ -32,7 +38,7 @@ export function HeroSection() {
                             backgroundClip: 'text'
                         }}
                     >
-                        Digital Assets,
+                        {t.title1}
                     </span>
                     <span 
                         className="font-normal block"
@@ -43,7 +49,7 @@ export function HeroSection() {
                             lineHeight: '1'
                         }}
                     >
-                        Real-World Privileges
+                        {t.title2}
                     </span>
                 </h1>
 
@@ -61,7 +67,7 @@ export function HeroSection() {
                             marginBottom: '0'
                         }}
                     >
-                        DTA (Digital Tourism Alliance) connects the digital economy with Thailand's luxury tourism industry. We are creating a world where digital asset holders can enjoy the best real-world benefits based on the value of their assets—without needing to move or sell them.
+                        {t.subtitle}
                     </p>
                 </div>
 
@@ -76,7 +82,7 @@ export function HeroSection() {
                             boxShadow: '0 10px 25px rgba(21, 93, 252, 0.3)'
                         }}
                     >
-                        Explore Ecosystem <ArrowRight className="h-4 w-4" />
+                        {t.exploreEcosystem} <ArrowRight className="h-4 w-4" />
                     </Link>
                     <Link
                         href="#"
@@ -86,7 +92,7 @@ export function HeroSection() {
                         }}
                     >
                         <Handshake className="h-4 w-4" />
-                        Partner with Us
+                        {t.partnerWithUs}
                     </Link>
                 </div>
 
@@ -116,19 +122,19 @@ export function HeroSection() {
                                     className="font-normal mb-1"
                                     style={{ color: '#6A7282', fontSize: '14px', fontWeight: 400, textAlign: 'left' }}
                                 >
-                                    Our First Solution
+                                    {t.ourFirstSolution}
                                 </h2>
                                 <h3 
                                     className="font-normal mb-1"
                                     style={{ color: '#101828', fontSize: '24px', fontWeight: 400, textAlign: 'left' }}
                                 >
-                                    SIMX
+                                    {t.simx}
                                 </h3>
                                 <p 
                                     className="font-medium mb-3"
                                     style={{ color: '#155DFC', fontSize: '14px', fontWeight: 500, textAlign: 'left' }}
                                 >
-                                    Smart Integrated Membership Experience
+                                    {t.simxSubtitle}
                                 </p>
                             </div>
                         </div>
@@ -145,8 +151,7 @@ export function HeroSection() {
                                     width: '100%'
                                 }}
                             >
-                                SIMX directly connects exclusive premium experiences, such as Thailand's finest golf courses, 
-                                luxury hotels, and private villas, with your digital wallet.
+                                {t.simxDescription}
                             </p>
                         </div>
                     </div>
@@ -167,16 +172,13 @@ export function HeroSection() {
                     >
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                             <div className="p-6 text-center border-r border-gray-200 last:border-r-0">
-                                <p className="text-3xl font-bold text-gray-900 mb-2">28M+</p>
-                                <p className="text-xs text-gray-500 uppercase font-semibold">Annual Tourists</p>
+                                <p className="text-xs text-gray-500 uppercase font-semibold">{t.annualTourists}</p>
                             </div>
                             <div className="p-6 text-center border-r border-gray-200 last:border-r-0">
-                                <p className="text-3xl font-bold text-gray-900 mb-2">B1.2T</p>
-                                <p className="text-xs text-gray-500 uppercase font-semibold">Tourism Market</p>
+                                <p className="text-xs text-gray-500 uppercase font-semibold">{t.tourismMarket}</p>
                             </div>
                             <div className="p-6 text-center border-r border-gray-200 last:border-r-0">
-                                <p className="text-3xl font-bold text-gray-900 mb-2">50+</p>
-                                <p className="text-xs text-gray-500 uppercase font-semibold">Premium Partners</p>
+                                <p className="text-xs text-gray-500 uppercase font-semibold">{t.premiumPartners}</p>
                             </div>
                         </div>
                     </div>

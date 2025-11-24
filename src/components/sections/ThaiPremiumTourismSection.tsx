@@ -1,13 +1,18 @@
 import { Globe2, Target, Heart, Sparkles, Users, CalendarCheck, TrendingUp } from "lucide-react";
+import { getTranslations, type Locale } from "@/lib/get-translations";
 
-export function ThaiPremiumTourismSection() {
+interface ThaiPremiumTourismSectionProps {
+    locale: Locale;
+}
+
+export function ThaiPremiumTourismSection({ locale }: ThaiPremiumTourismSectionProps) {
+    const t = getTranslations(locale).marketFocus;
     return (
         <section id="market-strategy" className="py-24" style={{ backgroundColor: '#F9FAFB' }}>
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="mb-4" style={{ fontSize: '36px' }}>
-                        <span style={{ color: '#101828' }}>Focusing on the </span>
-                        <span style={{ color: '#0279D5' }}>Thai Premium Tourism Market</span>
+                        <span style={{ color: '#101828' }}>{t.title}</span>
                     </h2>
                     <p 
                         className="font-normal max-w-2xl mx-auto"
@@ -16,7 +21,7 @@ export function ThaiPremiumTourismSection() {
                             color: '#4A5565'
                         }}
                     >
-                        DTA is executing a clear, data-driven market entry strategy to contribute to the qualitative growth of Thailand's tourism industry.
+                        {t.subtitle}
                     </p>
                 </div>
 
@@ -53,7 +58,7 @@ export function ThaiPremiumTourismSection() {
                                     fontSize: '20px'
                                 }}
                             >
-                                Market of Opportunity
+                                {t.marketOfOpportunityTitle}
                             </h3>
                             <p 
                                 className="font-normal"
@@ -62,7 +67,7 @@ export function ThaiPremiumTourismSection() {
                                     fontSize: '16px'
                                 }}
                             >
-                                Thailand is a dynamic market that saw 28.2 million tourists and 1.2 trillion baht in revenue in 2023, and is strategically shifting to a "Quality over Quantity" model.
+                                {t.marketOfOpportunityDescription}
                             </p>
                         </div>
 
@@ -88,7 +93,7 @@ export function ThaiPremiumTourismSection() {
                                     fontSize: '20px'
                                 }}
                             >
-                                Core Target
+                                {t.coreTargetTitle}
                             </h3>
                             <p 
                                 className="font-normal"
@@ -97,7 +102,7 @@ export function ThaiPremiumTourismSection() {
                                     fontSize: '16px'
                                 }}
                             >
-                                South Korean tourists (1.66 million in 2023) are a key high-value demographic with high average spending.
+                                {t.coreTargetDescription}
                             </p>
                         </div>
                     </div>
@@ -114,7 +119,7 @@ export function ThaiPremiumTourismSection() {
                                     fontSize: '24px'
                                 }}
                             >
-                                High-Yield Niche Focus
+                                {t.highYieldNicheFocusTitle}
                             </h3>
                             <div className="flex gap-6">
                             {/* Golf Tourism */}
@@ -146,7 +151,7 @@ export function ThaiPremiumTourismSection() {
                                         fontWeight: 500
                                     }}
                                 >
-                                    Golf Tourism
+                                    {t.golfTourismTitle}
                                 </h4>
                                 <p 
                                     className="font-normal"
@@ -155,7 +160,7 @@ export function ThaiPremiumTourismSection() {
                                         fontSize: '14px'
                                     }}
                                 >
-                                    Explosive demand exists due to high costs and booking difficulties in South Korea. DTA is using this as its initial beachhead market
+                                    {t.golfTourismDescription}
                                 </p>
                             </div>
 
@@ -188,7 +193,7 @@ export function ThaiPremiumTourismSection() {
                                         fontWeight: 500
                                     }}
                                 >
-                                    Medical & Wellness
+                                    {t.medicalWellnessTitle}
                                 </h4>
                                 <p 
                                     className="font-normal"
@@ -197,7 +202,7 @@ export function ThaiPremiumTourismSection() {
                                         fontSize: '14px'
                                     }}
                                 >
-                                    Leveraging Thailand's strength as Asia's medical tourism hub (a $6B market in 2023)
+                                    {t.medicalWellnessDescription}
                                 </p>
                             </div>
 
@@ -230,7 +235,7 @@ export function ThaiPremiumTourismSection() {
                                         fontWeight: 500
                                     }}
                                 >
-                                    Luxury & Experiential Travel
+                                    {t.luxuryExperientialTravelTitle}
                                 </h4>
                                 <p 
                                     className="font-normal"
@@ -239,7 +244,7 @@ export function ThaiPremiumTourismSection() {
                                         fontSize: '14px'
                                     }}
                                 >
-                                    An $11.1B market in 2024 with direct synergies for DTA's premium membership
+                                    {t.luxuryExperientialTravelDescription}
                                 </p>
                             </div>
                         </div>
@@ -258,7 +263,7 @@ export function ThaiPremiumTourismSection() {
                                     fontSize: '24px'
                                 }}
                             >
-                                Phased Market Penetration
+                                {t.phasedMarketPenetrationTitle}
                             </h3>
                             <div className="space-y-4">
                                 {/* Phase 1 */}
@@ -289,7 +294,7 @@ export function ThaiPremiumTourismSection() {
                                                 fontSize: '18px'
                                             }}
                                         >
-                                            Phase 1: Months 1-12 | Dominate Accessible Market
+                                            {t.phase1Title}
                                         </h4>
                                         <p 
                                             className="font-normal"
@@ -298,7 +303,7 @@ export function ThaiPremiumTourismSection() {
                                                 fontSize: '16px'
                                             }}
                                         >
-                                            Establish SIMX as the top platform by partnering with key courses in Pattaya and Hua Hin.
+                                            {t.phase1Description}
                                         </p>
                                     </div>
                                 </div>
@@ -331,7 +336,7 @@ export function ThaiPremiumTourismSection() {
                                                 fontSize: '18px'
                                             }}
                                         >
-                                            Phase 2: Months 13-24 | Expand to Mid-to-Luxury
+                                            {t.phase2Title}
                                         </h4>
                                         <p 
                                             className="font-normal"
@@ -340,7 +345,7 @@ export function ThaiPremiumTourismSection() {
                                                 fontSize: '16px'
                                             }}
                                         >
-                                            Cross-sell "Play & Wellness" packages (golf + health screenings) to the established user base.
+                                            {t.phase2Description}
                                         </p>
                                     </div>
                                 </div>
@@ -374,7 +379,7 @@ export function ThaiPremiumTourismSection() {
                                                 marginBottom: '2px'
                                             }}
                                         >
-                                            Phase 3: Months 25-36 | Achieve Ecosystem Leadership
+                                            {t.phase3Title}
                                         </h4>
                                         <p 
                                             className="font-normal"
@@ -383,7 +388,7 @@ export function ThaiPremiumTourismSection() {
                                                 fontSize: '16px'
                                             }}
                                         >
-                                            Expand the user base to other high-spending regions (e.g., Middle East, USA) to become the standard platform for high-value tourism in Thailand.
+                                            {t.phase3Description}
                                         </p>
                                     </div>
                                 </div>

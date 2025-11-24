@@ -1,7 +1,13 @@
 import { CheckCircle2, Circle, CircleDot, Dot, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { getTranslations, type Locale } from "@/lib/get-translations";
 
-export function RoadmapSection() {
+interface RoadmapSectionProps {
+    locale: Locale;
+}
+
+export function RoadmapSection({ locale }: RoadmapSectionProps) {
+    const t = getTranslations(locale).roadmap;
     return (
         <section id="roadmap" className="py-24 bg-white">
             <div className="container mx-auto px-4">
@@ -10,13 +16,13 @@ export function RoadmapSection() {
                         className="font-normal mb-4"
                         style={{ fontSize: '48px' }}
                     >
-                        DTA's Technology Journey to 2027
+                        {t.title}
                     </h2>
                     <p 
                         className="font-normal max-w-2xl mx-auto"
                         style={{ fontSize: '18px' }}
                     >
-                        Our strategic technology development plan
+                        {t.subtitle}
                     </p>
                 </div>
 
@@ -43,57 +49,23 @@ export function RoadmapSection() {
                             className="col-span-12 md:col-span-4 font-normal mb-4 md:mb-0"
                             style={{ color: '#101828', fontSize: '18px' }}
                         >
-                            Foundation & Launch
+                            {t.year2025Theme}
                         </div>
                         <div className="col-span-12 md:col-span-6 space-y-2">
-                            <div className="flex items-start gap-2">
-                                <div 
-                                    className="shrink-0 rounded-full" 
-                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                />
-                                <span 
-                                    className="font-normal"
-                                    style={{ color: '#4A5565', fontSize: '14px' }}
-                                >
-                                    Finalize DBOS engine
-                                </span>
-                            </div>
-                            <div className="flex items-start gap-2">
-                                <div 
-                                    className="shrink-0 rounded-full" 
-                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                />
-                                <span 
-                                    className="font-normal"
-                                    style={{ color: '#4A5565', fontSize: '14px' }}
-                                >
-                                    Deploy core contracts
-                                </span>
-                            </div>
-                            <div className="flex items-start gap-2">
-                                <div 
-                                    className="shrink-0 rounded-full" 
-                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                />
-                                <span 
-                                    className="font-normal"
-                                    style={{ color: '#4A5565', fontSize: '14px' }}
-                                >
-                                    Seed liquidity
-                                </span>
-                            </div>
-                            <div className="flex items-start gap-2">
-                                <div 
-                                    className="shrink-0 rounded-full" 
-                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                />
-                                <span 
-                                    className="font-normal"
-                                    style={{ color: '#4A5565', fontSize: '14px' }}
-                                >
-                                    Launch first version
-                                </span>
-                            </div>
+                            {t.year2025Highlights.map((highlight, index) => (
+                                <div key={index} className="flex items-start gap-2">
+                                    <div 
+                                        className="shrink-0 rounded-full" 
+                                        style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
+                                    />
+                                    <span 
+                                        className="font-normal"
+                                        style={{ color: '#4A5565', fontSize: '14px' }}
+                                    >
+                                        {highlight}
+                                    </span>
+                                </div>
+                            ))}
                         </div>
                     </div>
 
@@ -109,45 +81,23 @@ export function RoadmapSection() {
                             className="col-span-12 md:col-span-4 font-normal mb-4 md:mb-0"
                             style={{ color: '#101828', fontSize: '18px' }}
                         >
-                            Integration & Scaling
+                            {t.year2026Theme}
                         </div>
                         <div className="col-span-12 md:col-span-6 space-y-2">
-                            <div className="flex items-start gap-2">
-                                <div 
-                                    className="shrink-0 rounded-full" 
-                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                />
-                                <span 
-                                    className="font-normal"
-                                    style={{ color: '#4A5565', fontSize: '14px' }}
-                                >
-                                    DeFi protocol integrations
-                                </span>
-                            </div>
-                            <div className="flex items-start gap-2">
-                                <div 
-                                    className="shrink-0 rounded-full" 
-                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                />
-                                <span 
-                                    className="font-normal"
-                                    style={{ color: '#4A5565', fontSize: '14px' }}
-                                >
-                                    Premium analytics suite
-                                </span>
-                            </div>
-                            <div className="flex items-start gap-2">
-                                <div 
-                                    className="shrink-0 rounded-full" 
-                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                />
-                                <span 
-                                    className="font-normal"
-                                    style={{ color: '#4A5565', fontSize: '14px' }}
-                                >
-                                    L3 blueprint
-                                </span>
-                            </div>
+                            {t.year2026Highlights.map((highlight, index) => (
+                                <div key={index} className="flex items-start gap-2">
+                                    <div 
+                                        className="shrink-0 rounded-full" 
+                                        style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
+                                    />
+                                    <span 
+                                        className="font-normal"
+                                        style={{ color: '#4A5565', fontSize: '14px' }}
+                                    >
+                                        {highlight}
+                                    </span>
+                                </div>
+                            ))}
                         </div>
                     </div>
 
@@ -163,57 +113,23 @@ export function RoadmapSection() {
                             className="col-span-12 md:col-span-4 font-normal mb-4 md:mb-0"
                             style={{ color: '#101828', fontSize: '18px' }}
                         >
-                            Sovereignty & Leadership
+                            {t.year2027Theme}
                         </div>
                         <div className="col-span-12 md:col-span-6 space-y-2">
-                            <div className="flex items-start gap-2">
-                                <div 
-                                    className="shrink-0 rounded-full" 
-                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                />
-                                <span 
-                                    className="font-normal"
-                                    style={{ color: '#4A5565', fontSize: '14px' }}
-                                >
-                                    Public L3 mainnet
-                                </span>
-                            </div>
-                            <div className="flex items-start gap-2">
-                                <div 
-                                    className="shrink-0 rounded-full" 
-                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                />
-                                <span 
-                                    className="font-normal"
-                                    style={{ color: '#4A5565', fontSize: '14px' }}
-                                >
-                                    SDK release
-                                </span>
-                            </div>
-                            <div className="flex items-start gap-2">
-                                <div 
-                                    className="shrink-0 rounded-full" 
-                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                />
-                                <span 
-                                    className="font-normal"
-                                    style={{ color: '#4A5565', fontSize: '14px' }}
-                                >
-                                    Developer grants
-                                </span>
-                            </div>
-                            <div className="flex items-start gap-2">
-                                <div 
-                                    className="shrink-0 rounded-full" 
-                                    style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
-                                />
-                                <span 
-                                    className="font-normal"
-                                    style={{ color: '#4A5565', fontSize: '14px' }}
-                                >
-                                    Full on-chain governance
-                                </span>
-                            </div>
+                            {t.year2027Highlights.map((highlight, index) => (
+                                <div key={index} className="flex items-start gap-2">
+                                    <div 
+                                        className="shrink-0 rounded-full" 
+                                        style={{ backgroundColor: '#0279D5', width: '6px', height: '6px', marginTop: '7px' }}
+                                    />
+                                    <span 
+                                        className="font-normal"
+                                        style={{ color: '#4A5565', fontSize: '14px' }}
+                                    >
+                                        {highlight}
+                                    </span>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -225,7 +141,7 @@ export function RoadmapSection() {
                         className="inline-flex items-center gap-2 font-normal transition-colors"
                         style={{ color: '#0279D5', fontSize: '16px' }}
                     >
-                        View Full Roadmap
+                        {t.viewFullRoadmap}
                         <ArrowRight className="h-4 w-4" style={{ color: '#0279D5' }} />
                     </Link>
                 </div>

@@ -1,7 +1,13 @@
 import Image from "next/image";
 import { FileCheck, CheckCircle, Users, Handshake, TrendingUp, Zap, GitBranch } from "lucide-react";
+import { getTranslations, type Locale } from "@/lib/get-translations";
 
-export function InfrastructureSection() {
+interface InfrastructureSectionProps {
+    locale: Locale;
+}
+
+export function InfrastructureSection({ locale }: InfrastructureSectionProps) {
+    const t = getTranslations(locale).infrastructure;
     return (
         <section id="core-structure" className="py-24 bg-white">
             <div className="container mx-auto px-4">
@@ -30,7 +36,7 @@ export function InfrastructureSection() {
                                 backgroundClip: 'text'
                             }}
                         >
-                            ECOSYSTEM ARCHITECTURE
+                            {t.ecosystemArchitecture}
                         </span>
                     </div>
                 </div>
@@ -47,10 +53,10 @@ export function InfrastructureSection() {
                             color: 'transparent'
                         }}
                     >
-                        Three-Layer Infrastructure
+                        {t.title}
                     </h2>
                     <p className="font-normal max-w-2xl mx-auto" style={{ color: '#4A5565', fontSize: '18px', letterSpacing: '-0.44px' }}>
-                        A comprehensive blockchain ecosystem connecting users, members, and platform providers.
+                        {t.subtitle}
                     </p>
                 </div>
 
@@ -91,10 +97,10 @@ export function InfrastructureSection() {
                                         color: '#1447E6'
                                     }}
                                 >
-                                    Layer 1: Operating Entity
+                                    {t.dtaLayer}
                                 </span>
                                 <p className="text-gray-600 text-sm">
-                                    DTA is the ecosystem's Operator and Legal Steward.
+                                    {t.dtaDescription}
                                 </p>
                             </div>
                         </div>
@@ -107,10 +113,9 @@ export function InfrastructureSection() {
                                     <FileCheck className="h-5 w-5" style={{ color: '#45556C' }} />
                                 </div>
                                 <div className="flex-1">
-                                    <h4 className="font-semibold text-gray-900 mb-1">Role</h4>
+                                    <h4 className="font-semibold text-gray-900 mb-1">{t.dtaRoleTitle}</h4>
                                     <p className="text-sm text-gray-600 -ml-[36px]">
-                                        Exclusively handles all off-chain business execution, including partnership contracts, 
-                                        legal compliance, operational fund management, and global marketing.
+                                        {t.dtaRoleDescription}
                                     </p>
                                 </div>
                             </div>
@@ -121,10 +126,9 @@ export function InfrastructureSection() {
                                     <CheckCircle className="h-5 w-5" style={{ color: '#45556C' }} />
                                 </div>
                                 <div className="flex-1">
-                                    <h4 className="font-semibold text-gray-900 mb-1">Goal</h4>
+                                    <h4 className="font-semibold text-gray-900 mb-1">{t.dtaGoalTitle}</h4>
                                     <p className="text-sm text-gray-600 -ml-[36px]">
-                                        To build trust with regulatory bodies like the Thai SEC and provide a stable business 
-                                        environment for partners and sustainable benefits for members.
+                                        {t.dtaGoalDescription}
                                     </p>
                                 </div>
                             </div>
@@ -158,7 +162,7 @@ export function InfrastructureSection() {
                             className="font-normal"
                             style={{ color: '#364153', fontSize: '14px' }}
                         >
-                            POWERS BOTH PLATFORMS
+                            {t.powersBothPlatforms}
                         </span>
                         <Zap className="h-5 w-5" style={{ color: '#0092B8' }} />
                     </div>
@@ -221,10 +225,10 @@ export function InfrastructureSection() {
                                         color: '#1447E6'
                                     }}
                                 >
-                                    Layer 2: Member Platform
+                                    {t.simxLayer}
                                 </span>
                                 <p className="text-gray-600 text-sm">
-                                    SiMX is DTA's Premium D2O Membership Platform
+                                    {t.simxDescription}
                                 </p>
                             </div>
                         </div>
@@ -237,9 +241,9 @@ export function InfrastructureSection() {
                                     <Users className="h-5 w-5" style={{ color: '#155DFC' }} />
                                 </div>
                                 <div className="flex-1">
-                                    <h4 className="font-semibold text-gray-900 mb-1">Role</h4>
+                                    <h4 className="font-semibold text-gray-900 mb-1">{t.simxRoleTitle}</h4>
                                     <p className="text-sm text-gray-600 -ml-[36px]">
-                                        A membership service for digital asset holders. Non-chain advocates (members) are involved.
+                                        {t.simxRoleDescription}
                                     </p>
                                 </div>
                             </div>
@@ -250,9 +254,9 @@ export function InfrastructureSection() {
                                     <CheckCircle className="h-5 w-5" style={{ color: '#155DFC' }} />
                                 </div>
                                 <div className="flex-1">
-                                    <h4 className="font-semibold text-gray-900 mb-1">Benefits</h4>
+                                    <h4 className="font-semibold text-gray-900 mb-1">{t.simxBenefitsTitle}</h4>
                                     <p className="text-sm text-gray-600 -ml-[36px]">
-                                        Members receive access to our SiMX-based ecosystem, DeFi assets like SiM-T, granting exclusive access to premium Thai golf courses, luxury resorts, and private villas.
+                                        {t.simxBenefitsDescription}
                                     </p>
                                 </div>
                             </div>
@@ -296,10 +300,10 @@ export function InfrastructureSection() {
                                         color: '#007595'
                                     }}
                                 >
-                                    Layer 3: Provider Gateway
+                                    {t.sinodeLayer}
                                 </span>
                                 <p className="text-gray-600 text-sm">
-                                    SiNODE is DTA's B2B Business Gateway
+                                    {t.sinodeDescription}
                                 </p>
                             </div>
                         </div>
@@ -312,9 +316,9 @@ export function InfrastructureSection() {
                                     <Handshake className="h-5 w-5" style={{ color: '#0092B8' }} />
                                 </div>
                                 <div className="flex-1">
-                                    <h4 className="font-semibold text-gray-900 mb-1">Role</h4>
+                                    <h4 className="font-semibold text-gray-900 mb-1">{t.sinodeRoleTitle}</h4>
                                     <p className="text-sm text-gray-600 -ml-[36px]">
-                                        The gateway for real-world B2B (e.g., hotels, airlines, golf courses) to connect to the D2O membership network.
+                                        {t.sinodeRoleDescription}
                                     </p>
                                 </div>
                             </div>
@@ -325,9 +329,9 @@ export function InfrastructureSection() {
                                     <TrendingUp className="h-5 w-5" style={{ color: '#0092B8' }} />
                                 </div>
                                 <div className="flex-1">
-                                    <h4 className="font-semibold text-gray-900 mb-1">Function</h4>
+                                    <h4 className="font-semibold text-gray-900 mb-1">{t.sinodeFunctionTitle}</h4>
                                     <p className="text-sm text-gray-600 -ml-[36px]">
-                                        Partners receive sophisticated analytics from DTA via SiM-DEC, including sales analytics, targeted marketing, and a Smart Booking System for premium members.
+                                        {t.sinodeFunctionDescription}
                                     </p>
                                 </div>
                             </div>
@@ -369,7 +373,7 @@ export function InfrastructureSection() {
                                     color: 'transparent'
                                 }}
                             >
-                                Ecosystem Synergy
+                                {t.ecosystemSynergyTitle}
                             </h3>
                             <p 
                                 className="font-normal"
@@ -379,7 +383,7 @@ export function InfrastructureSection() {
                                     color: '#4A5565'
                                 }}
                             >
-                                SiPASS members seamlessly access premium services through SiNODE-connected providers, creating a unified blockchain-powered tourism experience
+                                {t.ecosystemSynergyDescription}
                             </p>
                         </div>
                     </div>

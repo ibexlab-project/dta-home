@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { getTranslations, type Locale } from "@/lib/get-translations";
 
 function PartnerCard({ num }: { num: number }) {
     const [imageError, setImageError] = useState(false);
@@ -39,7 +40,12 @@ function PartnerCard({ num }: { num: number }) {
     );
 }
 
-export function PartnerNetworkSection() {
+interface PartnerNetworkSectionProps {
+    locale: Locale;
+}
+
+export function PartnerNetworkSection({ locale }: PartnerNetworkSectionProps) {
+    const t = getTranslations(locale).partners;
     const partnerLogos = Array.from({ length: 8 }, (_, i) => i + 1);
 
     return (
@@ -50,8 +56,8 @@ export function PartnerNetworkSection() {
                         className="font-normal mb-4"
                         style={{ fontSize: '36px' }}
                     >
-                        <span style={{ color: '#101828' }}>Partner </span>
-                        <span style={{ color: '#0279D5' }}>Network</span>
+                        <span style={{ color: '#101828' }}>{t.title1} </span>
+                        <span style={{ color: '#0279D5' }}>{t.title2}</span>
                     </h2>
                     <p 
                         className="font-normal max-w-2xl mx-auto"
@@ -60,7 +66,7 @@ export function PartnerNetworkSection() {
                             fontSize: '16px'
                         }}
                     >
-                        DTA works closely with Thailand's most prestigious hotels, resorts, golf clubs, and lifestyle brands.
+                        {t.subtitle}
                     </p>
                 </div>
 
@@ -99,7 +105,7 @@ export function PartnerNetworkSection() {
                             className="font-normal mb-4"
                             style={{ color: '#101828', fontSize: '24px' }}
                         >
-                            Partner with Us
+                            {t.partnerWithUsTitle}
                         </h3>
                         <p 
                             className="font-normal mb-6"
@@ -108,7 +114,7 @@ export function PartnerNetworkSection() {
                                 fontSize: '16px'
                             }}
                         >
-                            Join the SINODE network and connect with a new high-value customer base.
+                            {t.partnerWithUsDescription}
                         </p>
                         <Link
                             href="#"
@@ -122,7 +128,7 @@ export function PartnerNetworkSection() {
                                 height: '48px'
                             }}
                         >
-                            Become a Partner
+                            {t.becomeAPartner}
                             <ArrowRight className="h-4 w-4" />
                         </Link>
                     </div>

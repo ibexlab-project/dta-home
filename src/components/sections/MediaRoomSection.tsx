@@ -10,31 +10,23 @@ interface MediaCard {
     imageAlt: string;
 }
 
-export function MediaRoomSection() {
-    const mediaCards: MediaCard[] = [
-        {
-            image: "/images/media/media-mou-signing.png",
-            date: "27 November 2024",
-            title: "DTA Signs MOU with Tourism Authority of Thailand to Attract Premium Tourists",
-            description: "",
-            imageAlt: "MOU signing ceremony with Tourism Authority of Thailand"
-        },
-        {
-            image: "/images/media/media-simx-launch.png",
-            date: "06 October 2024",
-            title: "SIMX Successfully Launches on Base L2 Mainnet",
-            description: "",
-            imageAlt: "SiMX launch on Base L2 Mainnet"
-        },
-        {
-            image: "/images/media/media-pilot-trust.png",
-            date: "15 September 2024",
-            title: "DTA Ensures Partner Trust with DBOS-Powered Settlement System",
-            description: "",
-            imageAlt: "DTA pilot trust with USDC settlement system"
-        }
-    ];
+import { getTranslations, type Locale } from "@/lib/get-translations";
 
+interface MediaCard {
+    image: string;
+    date: string;
+    title: string;
+    description: string;
+    imageAlt: string;
+}
+
+interface MediaRoomSectionProps {
+    locale: Locale;
+    mediaCards: MediaCard[];
+}
+
+export function MediaRoomSection({ locale, mediaCards }: MediaRoomSectionProps) {
+    const t = getTranslations(locale).media;
     return (
         <section 
             id="media" 
@@ -47,8 +39,8 @@ export function MediaRoomSection() {
                         className="font-normal mb-4"
                         style={{ fontSize: '36px' }}
                     >
-                        <span style={{ color: '#101828' }}>Media </span>
-                        <span style={{ color: '#0279D5' }}>Room</span>
+                        <span style={{ color: '#101828' }}>{t.title1} </span>
+                        <span style={{ color: '#0279D5' }}>{t.title2}</span>
                     </h2>
                     <p 
                         className="font-normal max-w-2xl mx-auto"
@@ -57,7 +49,7 @@ export function MediaRoomSection() {
                             fontSize: '16px'
                         }}
                     >
-                        See the latest news and press coverage featuring the DTA and SIMX ecosystem.
+                        {t.subtitle}
                     </p>
                 </div>
 
@@ -113,7 +105,7 @@ export function MediaRoomSection() {
                         className="inline-flex items-center gap-2 font-normal transition-colors"
                         style={{ color: '#0279D5', fontSize: '16px' }}
                     >
-                        See More News
+                        {t.seeMoreNews}
                         <ArrowRight className="h-4 w-4" style={{ color: '#0279D5' }} />
                     </Link>
                 </div>

@@ -1,6 +1,12 @@
 import { Database, ShieldCheck, TrendingUp } from "lucide-react";
+import { getTranslations, type Locale } from "@/lib/get-translations";
 
-export function TechArchitectureSection() {
+interface TechArchitectureSectionProps {
+    locale: Locale;
+}
+
+export function TechArchitectureSection({ locale }: TechArchitectureSectionProps) {
+    const t = getTranslations(locale).techArchitecture;
     return (
         <section id="technology" className="py-24 bg-white">
             <div className="container mx-auto px-4">
@@ -9,8 +15,8 @@ export function TechArchitectureSection() {
                         className="font-normal mb-4"
                         style={{ fontSize: '36px' }}
                     >
-                        <span style={{ color: '#101828' }}>Technology Architecture</span>
-                        <span style={{ color: '#0279D5' }}> for Trust</span>
+                        <span style={{ color: '#101828' }}>{t.title1}</span>
+                        <span style={{ color: '#0279D5' }}> {t.title2}</span>
                     </h2>
                     <p 
                         className="font-normal max-w-2xl mx-auto"
@@ -19,7 +25,7 @@ export function TechArchitectureSection() {
                             fontSize: '16px'
                         }}
                     >
-                        DTA adopts practical, hybrid technology to provide stability for partners and convenience for members.
+                        {t.subtitle}
                     </p>
                 </div>
 
@@ -53,7 +59,7 @@ export function TechArchitectureSection() {
                                     fontSize: '20px'
                                 }}
                             >
-                                Hybrid Architecture
+                                {t.hybridArchitectureTitle}
                             </h4>
                             <p 
                                 className="font-normal"
@@ -62,7 +68,7 @@ export function TechArchitectureSection() {
                                     fontSize: '14px'
                                 }}
                             >
-                                The SINODE backend combines the rapid development of Supabase (for partner onboarding) with the financial-grade transactional reliability of DBOS (for fee settlements), ensuring both speed and stability.
+                                {t.hybridArchitectureDescription}
                             </p>
                         </div>
 
@@ -94,7 +100,7 @@ export function TechArchitectureSection() {
                                     fontSize: '20px'
                                 }}
                             >
-                                NFT Audit Proofs
+                                {t.nftAuditProofsTitle}
                             </h4>
                             <p 
                                 className="font-normal"
@@ -103,7 +109,7 @@ export function TechArchitectureSection() {
                                     fontSize: '14px'
                                 }}
                             >
-                                When an AI-generated business rule (e.g., a new benefit) is verified by DBOS, the result is issued as an NFT. This serves as a 'digital notarization' that transparently records all business logic, providing maximum trust to partners.
+                                {t.nftAuditProofsDescription}
                             </p>
                         </div>
 
@@ -135,7 +141,7 @@ export function TechArchitectureSection() {
                                     fontSize: '20px'
                                 }}
                             >
-                                Phased Network Expansion
+                                {t.phasedNetworkExpansionTitle}
                             </h4>
                             <p 
                                 className="font-normal"
@@ -144,7 +150,7 @@ export function TechArchitectureSection() {
                                     fontSize: '14px'
                                 }}
                             >
-                                Services will launch stably on the proven Base L2 network, with a long-term plan to transition to a sovereign L3 network as the ecosystem matures.
+                                {t.phasedNetworkExpansionDescription}
                             </p>
                         </div>
                     </div>
