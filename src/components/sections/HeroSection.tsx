@@ -16,7 +16,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
                 paddingTop: '120px'
             }}
         >
-            <div className="w-full mx-auto flex flex-col items-center text-center z-10 relative px-4" style={{ maxWidth: '1440px' }}>
+            <div className="flex flex-col items-center text-center z-10 relative" style={{ width: '1440px', margin: '0 auto', paddingLeft: '16px', paddingRight: '16px' }}>
                 {/* Tagline - Blockchain-Powered Tourism Platform */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium mb-6" style={{ backgroundColor: '#B7D9F4', border: '1px solid #94C6ED', borderRadius: '18px' }}>
                     <Sparkles className="h-4 w-4" style={{ color: '#364153' }} />
@@ -69,23 +69,25 @@ export function HeroSection({ locale }: HeroSectionProps) {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16" style={{ marginTop: '32px' }}>
+                <div className="flex flex-row items-center justify-center gap-4 mb-16" style={{ marginTop: '32px', whiteSpace: 'nowrap' }}>
                     <Link
                         href="#"
-                        className="px-8 py-3 text-white font-medium transition-colors flex items-center gap-2"
+                        className="px-8 py-3 text-white font-medium transition-colors flex items-center gap-2 shrink-0"
                         style={{
                             background: 'linear-gradient(to bottom right, #155DFC, #0092B8)',
                             borderRadius: '14px',
-                            boxShadow: '0 10px 25px rgba(21, 93, 252, 0.3)'
+                            boxShadow: '0 10px 25px rgba(21, 93, 252, 0.3)',
+                            whiteSpace: 'nowrap'
                         }}
                     >
                         {t.exploreEcosystem} <ArrowRight className="h-4 w-4" />
                     </Link>
                     <Link
                         href="#"
-                        className="px-8 py-3 bg-white text-gray-700 border border-gray-300 font-medium hover:bg-gray-50 transition-colors flex items-center gap-2"
+                        className="px-8 py-3 bg-white text-gray-700 border border-gray-300 font-medium hover:bg-gray-50 transition-colors flex items-center gap-2 shrink-0"
                         style={{
-                            borderRadius: '14px'
+                            borderRadius: '14px',
+                            whiteSpace: 'nowrap'
                         }}
                     >
                         <Handshake className="h-4 w-4" />
@@ -96,8 +98,9 @@ export function HeroSection({ locale }: HeroSectionProps) {
                 {/* SIMX Card - Our First Solution */}
                 <div className="flex justify-center mb-8 mt-8 relative z-10">
                     <div 
-                        className="bg-white rounded-2xl shadow-lg border p-8 max-w-3xl w-full"
+                        className="bg-white rounded-2xl shadow-lg border p-8"
                         style={{
+                            width: '768px',
                             borderColor: '#BEDBFF'
                         }}
                     >
@@ -165,8 +168,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
                             paddingBottom: '0px',
                             paddingLeft: '24px',
                             paddingRight: '24px',
-                            width: '680px',
-                            maxWidth: '100%'
+                            width: '680px'
                         }}
                     >
                         <div className="grid grid-cols-3 gap-0" style={{ width: '100%' }}>

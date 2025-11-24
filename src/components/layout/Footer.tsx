@@ -7,11 +7,11 @@ export function Footer() {
             className="text-white py-16"
             style={{ backgroundColor: '#101828' }}
         >
-            <div className="container mx-auto px-4">
+            <div style={{ width: '1440px', margin: '0 auto', paddingLeft: '16px', paddingRight: '16px' }}>
                 <div className="flex justify-center mb-12">
                     <div 
-                        className="grid grid-cols-1 md:grid-cols-4 gap-10 shrink-0"
-                        style={{ maxWidth: '1200px', width: '100%' }}
+                        className="grid grid-cols-4 gap-10 shrink-0"
+                        style={{ width: '1200px' }}
                     >
                     {/* Brand Column */}
                     <div className="space-y-4">
@@ -151,13 +151,13 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="flex justify-center">
                     <div 
-                        className="border-t border-gray-700 pt-8 pb-12 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 shrink-0"
-                        style={{ maxWidth: '1200px', width: '100%' }}
+                        className="border-t border-gray-700 pt-8 pb-12 flex flex-row justify-between items-center text-sm text-gray-400 shrink-0"
+                        style={{ width: '1200px' }}
                     >
                         <div>
                             © 2023 DTA, Inc. All rights reserved.
                         </div>
-                        <div className="flex items-center gap-2 mt-4 md:mt-0">
+                        <div className="flex items-center gap-2">
                             <Mail className="h-4 w-4" />
                             <span>contact@dta.net</span>
                         </div>

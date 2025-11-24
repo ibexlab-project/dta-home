@@ -9,9 +9,9 @@ export function ThaiPremiumTourismSection({ locale }: ThaiPremiumTourismSectionP
     const t = getTranslations(locale).marketFocus;
     return (
         <section id="market-strategy" className="py-24" style={{ backgroundColor: '#F9FAFB' }}>
-            <div className="container mx-auto px-4">
+            <div style={{ width: '1440px', margin: '0 auto', paddingLeft: '16px', paddingRight: '16px' }}>
                 <div className="text-center mb-16">
-                    <h2 className="mb-4 font-normal" style={{ fontSize: '36px' }}>
+                    <h2 className="mb-4 font-normal" style={{ fontSize: '36px', whiteSpace: 'nowrap' }}>
                         {locale === 'en' ? (
                             <>
                                 <span style={{ color: '#101828' }}>Focusing on Thailand's </span>

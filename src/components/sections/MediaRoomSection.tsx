@@ -33,11 +33,11 @@ export function MediaRoomSection({ locale, mediaCards }: MediaRoomSectionProps) 
             className="pb-24"
             style={{ backgroundColor: '#F9FAFB', paddingTop: '96px', scrollMarginTop: '80px' }}
         >
-            <div className="container mx-auto px-4">
+            <div style={{ width: '1440px', margin: '0 auto', paddingLeft: '16px', paddingRight: '16px' }}>
                 <div className="text-center mb-8">
                     <h2 
                         className="font-normal mb-4"
-                        style={{ fontSize: '36px' }}
+                        style={{ fontSize: '36px', whiteSpace: 'nowrap' }}
                     >
                         <span style={{ color: '#101828' }}>{t.title1} </span>
                         <span style={{ color: '#0279D5' }}>{t.title2}</span>

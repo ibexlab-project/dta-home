@@ -50,7 +50,7 @@ export function PartnerNetworkSection({ locale }: PartnerNetworkSectionProps) {
 
     return (
         <section id="partners" className="bg-white" style={{ paddingTop: '128px', paddingBottom: '96px', scrollMarginTop: '80px' }}>
-            <div className="container mx-auto px-4">
+            <div style={{ width: '1440px', margin: '0 auto', paddingLeft: '16px', paddingRight: '16px' }}>
                 <div className="text-center mb-16">
                     <h2 
                         className="font-normal mb-4"

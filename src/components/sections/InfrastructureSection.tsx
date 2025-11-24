@@ -10,7 +10,7 @@ export function InfrastructureSection({ locale }: InfrastructureSectionProps) {
     const t = getTranslations(locale).infrastructure;
     return (
         <section id="core-structure" className="py-24 bg-white">
-            <div className="container mx-auto px-4">
+            <div style={{ width: '1440px', margin: '0 auto', paddingLeft: '16px', paddingRight: '16px' }}>
                 {/* Ecosystem Architecture Card */}
                 <div className="flex justify-center mb-8">
                     <div
@@ -50,7 +50,8 @@ export function InfrastructureSection({ locale }: InfrastructureSectionProps) {
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
                             backgroundClip: 'text',
-                            color: 'transparent'
+                            color: 'transparent',
+                            whiteSpace: 'nowrap'
                         }}
                     >
                         {t.title}

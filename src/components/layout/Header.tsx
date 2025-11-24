@@ -21,8 +21,8 @@ export function Header({ locale }: HeaderProps) {
         router.push(newPath);
     };
     return (
-        <header className="sticky top-0 z-50 w-full bg-white" style={{ borderBottom: '1px solid #E5E7EB' }}>
-            <div className="container mx-auto flex h-16 items-center justify-between px-4">
+        <header className="sticky top-0 z-50 bg-white" style={{ borderBottom: '1px solid #E5E7EB', width: '1440px', margin: '0 auto' }}>
+            <div className="flex h-16 items-center justify-between" style={{ width: '100%', paddingLeft: '16px', paddingRight: '16px' }}>
                 {/* Logo */}
                 <Link href={`/${currentLang}`} className="flex items-center">
                     <Image
@@ -36,53 +36,53 @@ export function Header({ locale }: HeaderProps) {
                 </Link>
 
                 {/* Navigation */}
-                <nav className="hidden md:flex items-center gap-8">
+                <nav className="flex items-center gap-8" style={{ whiteSpace: 'nowrap' }}>
                     <Link 
                         href="#core-structure" 
                         className="font-normal hover:text-primary transition-colors"
-                        style={{ fontSize: '14px', color: '#4B5563' }}
+                        style={{ fontSize: '14px', color: '#4B5563', whiteSpace: 'nowrap' }}
                     >
                         Core Structure
                     </Link>
                     <Link 
                         href="#market-strategy" 
                         className="font-normal hover:text-primary transition-colors"
-                        style={{ fontSize: '14px', color: '#4B5563' }}
+                        style={{ fontSize: '14px', color: '#4B5563', whiteSpace: 'nowrap' }}
                     >
                         Market Strategy
                     </Link>
                     <Link 
                         href="#technology" 
                         className="font-normal hover:text-primary transition-colors"
-                        style={{ fontSize: '14px', color: '#4B5563' }}
+                        style={{ fontSize: '14px', color: '#4B5563', whiteSpace: 'nowrap' }}
                     >
                         Technology
                     </Link>
                     <Link 
                         href="#roadmap" 
                         className="font-normal hover:text-primary transition-colors"
-                        style={{ fontSize: '14px', color: '#4B5563' }}
+                        style={{ fontSize: '14px', color: '#4B5563', whiteSpace: 'nowrap' }}
                     >
                         Roadmap
                     </Link>
                     <Link 
                         href="#partners" 
                         className="font-normal hover:text-primary transition-colors"
-                        style={{ fontSize: '14px', color: '#4B5563' }}
+                        style={{ fontSize: '14px', color: '#4B5563', whiteSpace: 'nowrap' }}
                     >
                         Partners
                     </Link>
                     <Link 
                         href="#media" 
                         className="font-normal hover:text-primary transition-colors"
-                        style={{ fontSize: '14px', color: '#4B5563' }}
+                        style={{ fontSize: '14px', color: '#4B5563', whiteSpace: 'nowrap' }}
                     >
                         Media
                     </Link>
                 </nav>
 
                 {/* Actions */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4" style={{ whiteSpace: 'nowrap', flexShrink: 0 }}>
                     {/* Language Selector */}
                     <div 
                         className="flex items-center justify-center rounded-lg border cursor-pointer"

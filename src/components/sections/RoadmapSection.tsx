@@ -10,7 +10,7 @@ export function RoadmapSection({ locale }: RoadmapSectionProps) {
     const t = getTranslations(locale).roadmap;
     return (
         <section id="roadmap" className="py-24 bg-white">
-            <div className="container mx-auto px-4">
+            <div style={{ width: '1440px', margin: '0 auto', paddingLeft: '16px', paddingRight: '16px' }}>
                 <div className="text-center mb-16">
                     <p 
                         className="font-normal mb-2"
@@ -25,7 +25,8 @@ export function RoadmapSection({ locale }: RoadmapSectionProps) {
                         className="font-normal mb-4"
                         style={{ 
                             fontSize: '48px',
-                            color: '#101828'
+                            color: '#101828',
+                            whiteSpace: 'nowrap'
                         }}
                     >
                         {t.title}
@@ -41,32 +42,32 @@ export function RoadmapSection({ locale }: RoadmapSectionProps) {
                     </p>
                 </div>
 
-                <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden" style={{ width: '896px', margin: '0 auto' }}>
                     {/* Table Header */}
                     <div 
                         className="grid grid-cols-12 border-b border-gray-100 py-4 px-6 text-sm font-bold uppercase tracking-wider"
                         style={{ backgroundColor: '#364153', color: '#FFFFFF' }}
                     >
-                        <div className="col-span-12 md:col-span-2">YEAR</div>
-                        <div className="col-span-12 md:col-span-4">THEME</div>
-                        <div className="col-span-12 md:col-span-6">HIGHLIGHTS</div>
+                        <div className="col-span-2">YEAR</div>
+                        <div className="col-span-4">THEME</div>
+                        <div className="col-span-6">HIGHLIGHTS</div>
                     </div>
 
                     {/* 2025 */}
                     <div className="grid grid-cols-12 border-b border-gray-100 py-8 px-6 hover:bg-blue-50/50 transition-colors">
                         <div 
-                            className="col-span-12 md:col-span-2 font-normal mb-4 md:mb-0"
+                            className="col-span-2 font-normal"
                             style={{ color: '#0279D5', fontSize: '30px' }}
                         >
                             2025
                         </div>
                         <div 
-                            className="col-span-12 md:col-span-4 font-normal mb-4 md:mb-0"
+                            className="col-span-4 font-normal"
                             style={{ color: '#101828', fontSize: '18px' }}
                         >
                             {t.year2025Theme}
                         </div>
-                        <div className="col-span-12 md:col-span-6 space-y-2">
+                        <div className="col-span-6 space-y-2">
                             {t.year2025Highlights.map((highlight, index) => (
                                 <div key={index} className="flex items-start gap-2">
                                     <div 
@@ -87,18 +88,18 @@ export function RoadmapSection({ locale }: RoadmapSectionProps) {
                     {/* 2026 */}
                     <div className="grid grid-cols-12 border-b border-gray-100 py-8 px-6 hover:bg-blue-50/50 transition-colors">
                         <div 
-                            className="col-span-12 md:col-span-2 font-normal mb-4 md:mb-0"
+                            className="col-span-2 font-normal"
                             style={{ color: '#0279D5', fontSize: '30px' }}
                         >
                             2026
                         </div>
                         <div 
-                            className="col-span-12 md:col-span-4 font-normal mb-4 md:mb-0"
+                            className="col-span-4 font-normal"
                             style={{ color: '#101828', fontSize: '18px' }}
                         >
                             {t.year2026Theme}
                         </div>
-                        <div className="col-span-12 md:col-span-6 space-y-2">
+                        <div className="col-span-6 space-y-2">
                             {t.year2026Highlights.map((highlight, index) => (
                                 <div key={index} className="flex items-start gap-2">
                                     <div 
@@ -119,18 +120,18 @@ export function RoadmapSection({ locale }: RoadmapSectionProps) {
                     {/* 2027 */}
                     <div className="grid grid-cols-12 py-8 px-6 hover:bg-blue-50/50 transition-colors">
                         <div 
-                            className="col-span-12 md:col-span-2 font-normal mb-4 md:mb-0"
+                            className="col-span-2 font-normal"
                             style={{ color: '#0279D5', fontSize: '30px' }}
                         >
                             2027
                         </div>
                         <div 
-                            className="col-span-12 md:col-span-4 font-normal mb-4 md:mb-0"
+                            className="col-span-4 font-normal"
                             style={{ color: '#101828', fontSize: '18px' }}
                         >
                             {t.year2027Theme}
                         </div>
-                        <div className="col-span-12 md:col-span-6 space-y-2">
+                        <div className="col-span-6 space-y-2">
                             {t.year2027Highlights.map((highlight, index) => (
                                 <div key={index} className="flex items-start gap-2">
                                     <div 
