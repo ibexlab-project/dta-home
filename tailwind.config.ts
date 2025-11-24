@@ -36,7 +36,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
+        sans: ["var(--font-poppins)", "sans-serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        "noto-sans-thai": ["var(--font-noto-sans-thai)", "sans-serif"],
       },
     },
   },

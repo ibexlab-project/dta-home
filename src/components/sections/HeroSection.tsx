@@ -1,4 +1,4 @@
-import { ArrowRight, Handshake, Wallet, Blocks } from "lucide-react";
+import { ArrowRight, Handshake, Wallet, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { getTranslations, type Locale } from "@/lib/get-translations";
 
@@ -12,22 +12,19 @@ export function HeroSection({ locale }: HeroSectionProps) {
         <section 
             className="relative pb-32 overflow-hidden"
             style={{
-                backgroundImage: 'url(/images/hero/hero_bg.png)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
+                background: 'linear-gradient(to bottom right, #BCDCF4, #E2F9FE, #FFFFFF)',
                 paddingTop: '120px'
             }}
         >
             <div className="w-full mx-auto flex flex-col items-center text-center z-10 relative px-4" style={{ maxWidth: '1440px' }}>
                 {/* Tagline - Blockchain-Powered Tourism Platform */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 text-primary text-sm font-medium mb-6" style={{ backgroundColor: '#BADAF4', border: '1px solid #88C0EB', borderRadius: '18px' }}>
-                    <Blocks className="h-4 w-4" style={{ color: '#0279D5' }} />
-                    <span>{t.tagline}</span>
+                <div className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium mb-6" style={{ backgroundColor: '#B7D9F4', border: '1px solid #94C6ED', borderRadius: '18px' }}>
+                    <Sparkles className="h-4 w-4" style={{ color: '#364153' }} />
+                    <span style={{ color: '#364153' }}>{t.tagline}</span>
                 </div>
 
                 {/* Headline */}
-                <h1 className="mb-6 w-full" style={{ letterSpacing: 'normal' }}>
+                <h1 className="mb-6" style={{ letterSpacing: 'normal', whiteSpace: 'nowrap' }}>
                     <span 
                         className="font-normal"
                         style={{ 
@@ -160,25 +157,48 @@ export function HeroSection({ locale }: HeroSectionProps) {
                 {/* Statistics Boxes */}
                 <div className="flex justify-center relative z-0" style={{ marginTop: '-150px' }}>
                     <div 
-                        className="bg-white rounded-2xl shadow-lg border max-w-3xl w-full flex flex-col justify-end"
+                        className="bg-white rounded-2xl shadow-lg border flex flex-col justify-end"
                         style={{
                             borderColor: '#BEDBFF',
                             minHeight: '200px',
                             paddingTop: '100px',
                             paddingBottom: '0px',
                             paddingLeft: '24px',
-                            paddingRight: '24px'
+                            paddingRight: '24px',
+                            width: '680px',
+                            maxWidth: '100%'
                         }}
                     >
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-                            <div className="p-6 text-center border-r border-gray-200 last:border-r-0">
-                                <p className="text-xs text-gray-500 uppercase font-semibold">{t.annualTourists}</p>
+                        <div className="grid grid-cols-3 gap-0" style={{ width: '100%' }}>
+                            <div 
+                                className="text-center border-r border-gray-200 last:border-r-0 flex flex-col overflow-hidden" 
+                                style={{ 
+                                    height: '110px',
+                                    padding: locale === 'th' ? '12px' : '24px'
+                                }}
+                            >
+                                <p className="text-2xl font-bold" style={{ color: '#101828', marginTop: '8px', marginBottom: '8px' }}>{t.annualTouristsNumber}</p>
+                                <p className="text-xs text-gray-500 uppercase font-semibold leading-tight break-words" style={{ lineHeight: '1.3', marginTop: 0 }}>{t.annualTouristsLabel}</p>
                             </div>
-                            <div className="p-6 text-center border-r border-gray-200 last:border-r-0">
-                                <p className="text-xs text-gray-500 uppercase font-semibold">{t.tourismMarket}</p>
+                            <div 
+                                className="text-center border-r border-gray-200 last:border-r-0 flex flex-col overflow-hidden" 
+                                style={{ 
+                                    height: '110px',
+                                    padding: locale === 'th' ? '12px' : '24px'
+                                }}
+                            >
+                                <p className="text-2xl font-bold" style={{ color: '#101828', marginTop: '8px', marginBottom: '8px' }}>{t.tourismMarketNumber}</p>
+                                <p className="text-xs text-gray-500 uppercase font-semibold leading-tight break-words" style={{ lineHeight: '1.3', marginTop: 0 }}>{t.tourismMarketLabel}</p>
                             </div>
-                            <div className="p-6 text-center border-r border-gray-200 last:border-r-0">
-                                <p className="text-xs text-gray-500 uppercase font-semibold">{t.premiumPartners}</p>
+                            <div 
+                                className="text-center border-r border-gray-200 last:border-r-0 flex flex-col overflow-hidden" 
+                                style={{ 
+                                    height: '110px',
+                                    padding: locale === 'th' ? '12px' : '24px'
+                                }}
+                            >
+                                <p className="text-2xl font-bold" style={{ color: '#101828', marginTop: '8px', marginBottom: '8px' }}>{t.premiumPartnersNumber}</p>
+                                <p className="text-xs text-gray-500 uppercase font-semibold leading-tight break-words" style={{ lineHeight: '1.3', marginTop: 0 }}>{t.premiumPartnersLabel}</p>
                             </div>
                         </div>
                     </div>

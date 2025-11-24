@@ -11,8 +11,18 @@ export function ThaiPremiumTourismSection({ locale }: ThaiPremiumTourismSectionP
         <section id="market-strategy" className="py-24" style={{ backgroundColor: '#F9FAFB' }}>
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="mb-4" style={{ fontSize: '36px' }}>
-                        <span style={{ color: '#101828' }}>{t.title}</span>
+                    <h2 className="mb-4 font-normal" style={{ fontSize: '36px' }}>
+                        {locale === 'en' ? (
+                            <>
+                                <span style={{ color: '#101828' }}>Focusing on Thailand's </span>
+                                <span style={{ color: '#0279D5' }}>Premium Tourism Market</span>
+                            </>
+                        ) : (
+                            <>
+                                <span style={{ color: '#101828' }}>มุ่งเน้นตลาดท่องเที่ยวระดับพรีเมียมใน</span>
+                                <span style={{ color: '#0279D5' }}>ประเทศไทย</span>
+                            </>
+                        )}
                     </h2>
                     <p 
                         className="font-normal max-w-2xl mx-auto"

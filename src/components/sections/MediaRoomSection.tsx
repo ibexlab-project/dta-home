@@ -31,7 +31,7 @@ export function MediaRoomSection({ locale, mediaCards }: MediaRoomSectionProps) 
         <section 
             id="media" 
             className="pb-24"
-            style={{ backgroundColor: '#F9FAFB', paddingTop: '128px', scrollMarginTop: '80px' }}
+            style={{ backgroundColor: '#F9FAFB', paddingTop: '96px', scrollMarginTop: '80px' }}
         >
             <div className="container mx-auto px-4">
                 <div className="text-center mb-8">

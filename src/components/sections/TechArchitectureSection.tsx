@@ -36,7 +36,7 @@ export function TechArchitectureSection({ locale }: TechArchitectureSectionProps
                             className="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow shrink-0"
                             style={{
                                 width: '384px',
-                                height: '218px'
+                                minHeight: '218px'
                             }}
                         >
                             <div 
@@ -77,7 +77,7 @@ export function TechArchitectureSection({ locale }: TechArchitectureSectionProps
                             className="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow shrink-0"
                             style={{
                                 width: '384px',
-                                height: '218px'
+                                minHeight: '218px'
                             }}
                         >
                             <div 
@@ -118,7 +118,7 @@ export function TechArchitectureSection({ locale }: TechArchitectureSectionProps
                             className="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow shrink-0"
                             style={{
                                 width: '384px',
-                                height: '218px'
+                                minHeight: '218px'
                             }}
                         >
                             <div 

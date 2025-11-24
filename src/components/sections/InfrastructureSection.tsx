@@ -66,7 +66,7 @@ export function InfrastructureSection({ locale }: InfrastructureSectionProps) {
                         className="bg-white rounded-2xl shadow-lg border p-8"
                         style={{
                             width: '672px',
-                            height: '366px',
+                            minHeight: '366px',
                             borderColor: '#BEDBFF'
                         }}
                     >

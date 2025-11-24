@@ -12,15 +12,30 @@ export function RoadmapSection({ locale }: RoadmapSectionProps) {
         <section id="roadmap" className="py-24 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
+                    <p 
+                        className="font-normal mb-2"
+                        style={{ 
+                            fontSize: '16px',
+                            color: '#6A7282'
+                        }}
+                    >
+                        {t.smallTitle}
+                    </p>
                     <h2 
                         className="font-normal mb-4"
-                        style={{ fontSize: '48px' }}
+                        style={{ 
+                            fontSize: '48px',
+                            color: '#101828'
+                        }}
                     >
                         {t.title}
                     </h2>
                     <p 
                         className="font-normal max-w-2xl mx-auto"
-                        style={{ fontSize: '18px' }}
+                        style={{ 
+                            fontSize: '18px',
+                            color: '#4A5565'
+                        }}
                     >
                         {t.subtitle}
                     </p>
