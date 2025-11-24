@@ -29,6 +29,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
                         className="font-normal"
                         style={{ 
                             fontSize: '96px',
+                            fontWeight: 500,
                             background: 'linear-gradient(to right, #101828, #1C398E, #104E64)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
@@ -42,6 +43,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
                         style={{ 
                             color: '#0279D5',
                             fontSize: '96px',
+                            fontWeight: 500,
                             marginTop: '-20px',
                             lineHeight: '1'
                         }}
@@ -58,9 +60,9 @@ export function HeroSection({ locale }: HeroSectionProps) {
                             color: '#4A5565', 
                             fontSize: '20px', 
                             lineHeight: '1.4', 
-                            letterSpacing: 'normal',
-                            width: '961px',
-                            maxWidth: '961px',
+                            letterSpacing: '-0.15px',
+                            width: '920px',
+                            maxWidth: '920px',
                             marginBottom: '0'
                         }}
                     >
