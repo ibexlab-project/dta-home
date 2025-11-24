@@ -64,7 +64,7 @@ export const en = {
     golfTourismTitle: "Golf Tourism",
     golfTourismDescription: "Explosive demand exists due to high costs and booking difficulties in South Korea. DTA is using this as its initial,",
     medicalWellnessTitle: "Medical & Wellness",
-    medicalWellnessDescription: "Leveraging Thailand's strength as Asia's medical tourism hub (a $6B market in 2023).",
+    medicalWellnessDescription: "Leveraging Thailand's strength as Asia's medical tourism hub ($6B market in 2023).",
     luxuryExperientialTravelTitle: "Luxury & Experiential Travel",
     luxuryExperientialTravelDescription: "An $11.1B market in 2024 with direct synergies for DTA's premium membership.",
     phasedMarketPenetrationTitle: "Phased Market Penetration",
@@ -82,7 +82,7 @@ export const en = {
     hybridArchitectureTitle: "Hybrid Architecture",
     hybridArchitectureDescription: "The SINODE backend combines the rapid development of Supabase (for partner onboarding) with the financial-grade transactional reliability of DBOS (for fee settlements), ensuring both speed and stability.",
     nftAuditProofsTitle: "NFT Audit Proofs",
-    nftAuditProofsDescription: "When an AI-generated business rule (e.g., a new benefit) is verified by DBOS, the result is issued as an NFT. This serves as a 'digital notarization'that transparently records all business logic, providing maximum trust to partners.",
+    nftAuditProofsDescription: "When an AI-generated business rule (e.g., a new benefit) is verified by DBOS, the result is issued as an NFT. This serves as a 'digital notarization' that transparently records all business logic, providing maximum trust to partners.",
     phasedNetworkExpansionTitle: "Phased Network Expansion",
     phasedNetworkExpansionDescription: "Services will launch stably on the proven Base L2 network, with a long-term plan to transition to a sovereign L3 network as the ecosystem matures.",
   },
@@ -92,23 +92,23 @@ export const en = {
     subtitle: "Our strategic technology development plan",
     year2025Theme: "2025 Foundation & Launch",
     year2025Highlights: [
-      "• Finalize DBOS engine",
-      "• Deploy core contracts",
-      "• Seed liquidity",
-      "• Launch first version"
+      "Finalize DBOS engine",
+      "Deploy core contracts",
+      "Seed liquidity",
+      "Launch first version"
     ],
     year2026Theme: "2026 Integration & Scaling",
     year2026Highlights: [
-      "• DeFi protocol integrations",
-      "• Premium analytics suite",
-      "• L3 blueprint"
+      "DeFi protocol integrations",
+      "Premium analytics suite",
+      "L3 blueprint"
     ],
     year2027Theme: "2027 Sovereignty & Leadership",
     year2027Highlights: [
-      "• Public L 3 mainnet",
-      "• SD K release",
-      "• Developer grants",
-      "• Full on-chain governance"
+      "Public L 3 mainnet",
+      "SDK release",
+      "Developer grants",
+      "Full on-chain governance"
     ],
     viewFullRoadmap: "View Full Roadmap",
   },

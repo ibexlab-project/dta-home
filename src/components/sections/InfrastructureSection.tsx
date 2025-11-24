@@ -200,7 +200,7 @@ export function InfrastructureSection({ locale }: InfrastructureSectionProps) {
                         }}
                     >
                         {/* Top Section */}
-                        <div className="flex items-start gap-6 mb-6">
+                        <div className="flex items-start gap-6 mb-1" style={{ minHeight: '140px' }}>
                             {/* Left Icon */}
                             <div className="shrink-0">
                                 <img 
@@ -275,7 +275,7 @@ export function InfrastructureSection({ locale }: InfrastructureSectionProps) {
                         }}
                     >
                         {/* Top Section */}
-                        <div className="flex items-start gap-6 mb-6">
+                        <div className="flex items-start gap-6 mb-1" style={{ minHeight: '140px' }}>
                             {/* Left Icon */}
                             <div className="shrink-0">
                                 <img 
