@@ -21,6 +21,5 @@ body {
   color: var(--foreground);
   background: #ffffff;
   letter-spacing: normal;
-  overflow-x: auto;
   min-width: 1440px;
 }
