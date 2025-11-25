@@ -132,5 +132,16 @@ export const en = {
     connectWallet: "Connect Wallet",
     learnMore: "Learn More",
   },
+  footer: {
+    description: "DTA Connecting the global digital economy with Thailand's premium tourism industry. We enable digital asset holders to experience real-world privileges through our SINODE platform.",
+    forPartners: "For Partners",
+    sinodePlatform: "SINODE Platform",
+    partnerNetwork: "Partner Network",
+    becomeAPartner: "Become a Partner",
+    businessInquiries: "Business Inquiries",
+    ourEcosystemForPartners: "Our Ecosystem For Partners",
+    ecosystemDescription: "SIMX Membership SINODE Platform SIPASS App Partner Network Smart Booking Become a Partner Premium Privileges Business Inquiries",
+    copyright: "© 2025 Digital Tourism Alliance Co., Ltd. All Rights Reserved.",
+  },
 } as const;
 

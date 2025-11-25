@@ -74,7 +74,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <MediaRoomSection locale={locale} mediaCards={mediaCards} />
         <BottomCTASection locale={locale} />
       </main>
-      <Footer />
+      <Footer locale={locale} />
     </div>
   );
 }

@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { Send, Mail } from "lucide-react";
+import { getTranslations, type Locale } from "@/lib/get-translations";
 
-export function Footer() {
+interface FooterProps {
+    locale: Locale;
+}
+
+export function Footer({ locale }: FooterProps) {
+    const t = getTranslations(locale).footer;
     return (
         <footer 
             className="text-white py-16"
@@ -20,7 +26,7 @@ export function Footer() {
                             <span style={{ color: '#0279D5' }}>.</span>
                         </h3>
                         <p className="text-gray-400 text-sm">
-                            DTA Connecting the global digital economy with Thailand's premium tourism industry. We enable digital asset holders to experience real-world privileges through our SINODE platform.
+                            {t.description}
                         </p>
                     </div>
 
@@ -30,7 +36,7 @@ export function Footer() {
                             className="font-normal"
                             style={{ fontSize: '18px' }}
                         >
-                            For Partners
+                            {t.forPartners}
                         </h4>
                         <ul className="space-y-2">
                             <li>
@@ -39,7 +45,7 @@ export function Footer() {
                                     className="font-normal hover:text-white transition-colors"
                                     style={{ color: '#99A1AF', fontSize: '14px' }}
                                 >
-                                    SINODE Platform
+                                    {t.sinodePlatform}
                                 </Link>
                             </li>
                             <li>
@@ -48,7 +54,7 @@ export function Footer() {
                                     className="font-normal hover:text-white transition-colors"
                                     style={{ color: '#99A1AF', fontSize: '14px' }}
                                 >
-                                    Partner Network
+                                    {t.partnerNetwork}
                                 </Link>
                             </li>
                             <li>
@@ -57,7 +63,7 @@ export function Footer() {
                                     className="font-normal hover:text-white transition-colors"
                                     style={{ color: '#99A1AF', fontSize: '14px' }}
                                 >
-                                    Become a Partner
+                                    {t.becomeAPartner}
                                 </Link>
                             </li>
                             <li>
@@ -66,7 +72,7 @@ export function Footer() {
                                     className="font-normal hover:text-white transition-colors"
                                     style={{ color: '#99A1AF', fontSize: '14px' }}
                                 >
-                                    Business Inquiries
+                                    {t.businessInquiries}
                                 </Link>
                             </li>
                         </ul>
@@ -78,13 +84,13 @@ export function Footer() {
                             className="font-normal"
                             style={{ fontSize: '18px' }}
                         >
-                            Our Ecosystem For Partners
+                            {t.ourEcosystemForPartners}
                         </h4>
                         <p 
                             className="font-normal"
                             style={{ color: '#99A1AF', fontSize: '14px' }}
                         >
-                            SIMX Membership SINODE Platform SIPASS App Partner Network Smart Booking Become a Partner Premium Privileges Business Inquiries
+                            {t.ecosystemDescription}
                         </p>
                         <div className="flex items-center gap-2">
                             <input
@@ -107,7 +113,7 @@ export function Footer() {
                         style={{ width: '1200px' }}
                     >
                         <div>
-                            © 2025 Digital Tourism Alliance Co., Ltd. All Rights Reserved.
+                            {t.copyright}
                         </div>
                         <div className="flex items-center gap-2">
                             <Mail className="h-4 w-4" />
