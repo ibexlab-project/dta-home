@@ -113,8 +113,8 @@ export const th = {
     viewFullRoadmap: "ดูแผนการพัฒนาทั้งหมด",
   },
   partners: {
-    title1: "Partner",
-    title2: "Network",
+    title1: "พันธมิตร",
+    title2: "เครือข่าย",
     subtitle: "DTA ร่วมงานอย่างใกล้ชิดกับโรงแรม รีสอร์ต สนามกอล์ฟ และแบรนด์ไลฟ์สไตล์ระดับชั้นนำของประเทศไทย",
     partnerWithUsTitle: "เป็นพันธมิตรกับเรา",
     partnerWithUsDescription: "เข้าร่วมเครือข่าย SINODE และเชื่อมต่อกับฐานลูกค้าที่มีมูลค่าสูงรายใหม่",

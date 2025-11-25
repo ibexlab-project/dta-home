@@ -56,7 +56,7 @@ export function InfrastructureSection({ locale }: InfrastructureSectionProps) {
                     >
                         {t.title}
                     </h2>
-                    <p className="font-normal max-w-2xl mx-auto" style={{ color: '#4A5565', fontSize: '18px', letterSpacing: '-0.44px' }}>
+                    <p className="font-normal mx-auto text-center" style={{ color: '#4A5565', fontSize: '18px', letterSpacing: '-0.44px', maxWidth: '1000px' }}>
                         {t.subtitle}
                     </p>
                 </div>

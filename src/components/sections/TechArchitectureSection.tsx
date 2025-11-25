@@ -19,10 +19,11 @@ export function TechArchitectureSection({ locale }: TechArchitectureSectionProps
                         <span style={{ color: '#0279D5' }}> {t.title2}</span>
                     </h2>
                     <p 
-                        className="font-normal max-w-2xl mx-auto"
+                        className="font-normal mx-auto text-center"
                         style={{
                             color: '#4A5565',
-                            fontSize: '16px'
+                            fontSize: '16px',
+                            maxWidth: '1000px'
                         }}
                     >
                         {t.subtitle}

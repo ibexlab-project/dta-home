@@ -10,7 +10,7 @@ export function Footer() {
             <div style={{ width: '1440px', margin: '0 auto', paddingLeft: '16px', paddingRight: '16px' }}>
                 <div className="flex justify-center mb-12">
                     <div 
-                        className="grid grid-cols-4 gap-10 shrink-0"
+                        className="grid grid-cols-3 gap-10 shrink-0"
                         style={{ width: '1200px' }}
                     >
                     {/* Brand Column */}
@@ -20,17 +20,17 @@ export function Footer() {
                             <span style={{ color: '#0279D5' }}>.</span>
                         </h3>
                         <p className="text-gray-400 text-sm">
-                            Bridging traditional finance and blockchain technology to create the future of decentralized financial services.
+                            DTA Connecting the global digital economy with Thailand's premium tourism industry. We enable digital asset holders to experience real-world privileges through our SINODE platform.
                         </p>
                     </div>
 
-                    {/* Services Column */}
-                    <div className="space-y-4">
+                    {/* For Partners Column */}
+                    <div className="space-y-4" style={{ marginLeft: '120px' }}>
                         <h4 
                             className="font-normal"
                             style={{ fontSize: '18px' }}
                         >
-                            Services
+                            For Partners
                         </h4>
                         <ul className="space-y-2">
                             <li>
@@ -39,7 +39,7 @@ export function Footer() {
                                     className="font-normal hover:text-white transition-colors"
                                     style={{ color: '#99A1AF', fontSize: '14px' }}
                                 >
-                                    Blockchain Integration
+                                    SINODE Platform
                                 </Link>
                             </li>
                             <li>
@@ -48,7 +48,7 @@ export function Footer() {
                                     className="font-normal hover:text-white transition-colors"
                                     style={{ color: '#99A1AF', fontSize: '14px' }}
                                 >
-                                    DID Solutions
+                                    Partner Network
                                 </Link>
                             </li>
                             <li>
@@ -57,7 +57,7 @@ export function Footer() {
                                     className="font-normal hover:text-white transition-colors"
                                     style={{ color: '#99A1AF', fontSize: '14px' }}
                                 >
-                                    Token Economy
+                                    Become a Partner
                                 </Link>
                             </li>
                             <li>
@@ -66,73 +66,25 @@ export function Footer() {
                                     className="font-normal hover:text-white transition-colors"
                                     style={{ color: '#99A1AF', fontSize: '14px' }}
                                 >
-                                    Wallet Services
+                                    Business Inquiries
                                 </Link>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Development Column */}
+                    {/* Our Ecosystem For Partners Column */}
                     <div className="space-y-4">
                         <h4 
                             className="font-normal"
                             style={{ fontSize: '18px' }}
                         >
-                            Development
-                        </h4>
-                        <ul className="space-y-2">
-                            <li>
-                                <Link 
-                                    href="#" 
-                                    className="font-normal hover:text-white transition-colors"
-                                    style={{ color: '#99A1AF', fontSize: '14px' }}
-                                >
-                                    API Documentation
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    href="#" 
-                                    className="font-normal hover:text-white transition-colors"
-                                    style={{ color: '#99A1AF', fontSize: '14px' }}
-                                >
-                                    Developer Portal
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    href="#" 
-                                    className="font-normal hover:text-white transition-colors"
-                                    style={{ color: '#99A1AF', fontSize: '14px' }}
-                                >
-                                    SDK Downloads
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    href="#" 
-                                    className="font-normal hover:text-white transition-colors"
-                                    style={{ color: '#99A1AF', fontSize: '14px' }}
-                                >
-                                    Support Center
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Stay Updated Column */}
-                    <div className="space-y-4">
-                        <h4 
-                            className="font-normal"
-                            style={{ fontSize: '18px' }}
-                        >
-                            Stay Updated
+                            Our Ecosystem For Partners
                         </h4>
                         <p 
                             className="font-normal"
                             style={{ color: '#99A1AF', fontSize: '14px' }}
                         >
-                            Subscribe to our newsletter for the latest updates
+                            SIMX Membership SINODE Platform SIPASS App Partner Network Smart Booking Become a Partner Premium Privileges Business Inquiries
                         </p>
                         <div className="flex items-center gap-2">
                             <input
@@ -155,11 +107,11 @@ export function Footer() {
                         style={{ width: '1200px' }}
                     >
                         <div>
-                            © 2023 DTA, Inc. All rights reserved.
+                            © 2025 Digital Tourism Alliance Co., Ltd. All Rights Reserved.
                         </div>
                         <div className="flex items-center gap-2">
                             <Mail className="h-4 w-4" />
-                            <span>contact@dta.net</span>
+                            <span>contact@digital-tour.co.th</span>
                         </div>
                     </div>
                 </div>
