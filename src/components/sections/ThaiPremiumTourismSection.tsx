@@ -8,7 +8,15 @@ interface ThaiPremiumTourismSectionProps {
 export function ThaiPremiumTourismSection({ locale }: ThaiPremiumTourismSectionProps) {
     const t = getTranslations(locale).marketFocus;
     return (
-        <section id="market-strategy" className="py-24" style={{ backgroundColor: '#F9FAFB' }}>
+        <section 
+            id="market-strategy" 
+            className="py-24" 
+            style={{ 
+                backgroundColor: '#F9FAFB',
+                minWidth: '1440px',
+                overflowX: 'visible'
+            }}
+        >
             <div style={{ width: '1440px', margin: '0 auto', paddingLeft: '16px', paddingRight: '16px' }}>
                 <div className="text-center mb-16">
                     <h2 className="mb-4 font-normal" style={{ fontSize: '36px', whiteSpace: 'nowrap' }}>

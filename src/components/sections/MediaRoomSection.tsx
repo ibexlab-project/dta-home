@@ -31,7 +31,13 @@ export function MediaRoomSection({ locale, mediaCards }: MediaRoomSectionProps) 
         <section 
             id="media" 
             className="pb-24"
-            style={{ backgroundColor: '#F9FAFB', paddingTop: '96px', scrollMarginTop: '80px' }}
+            style={{ 
+                backgroundColor: '#F9FAFB', 
+                paddingTop: '96px', 
+                scrollMarginTop: '80px',
+                minWidth: '1440px',
+                overflowX: 'visible'
+            }}
         >
             <div style={{ width: '1440px', margin: '0 auto', paddingLeft: '16px', paddingRight: '16px' }}>
                 <div className="text-center mb-8">

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Noto_Sans_Thai } from "next/font/google";
 import "../globals.css";
 import { clsx } from "clsx";
@@ -18,6 +18,13 @@ const notoSansThai = Noto_Sans_Thai({
 export const metadata: Metadata = {
   title: "DTA - Digital Assets, Real-World Privileges",
   description: "DTA offers a three-layer infrastructure for digital assets and real-world privileges",
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default async function LocaleLayout({

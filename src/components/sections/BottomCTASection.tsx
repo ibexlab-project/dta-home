@@ -11,10 +11,12 @@ export function BottomCTASection({ locale }: BottomCTASectionProps) {
     const t = getTranslations(locale).bottomCTA;
     return (
         <section 
-            className="flex items-center"
+            className="flex items-center justify-center"
             style={{ 
                 height: '336px',
-                background: 'linear-gradient(to bottom right, #155DFC, #0092B8)'
+                minWidth: '1440px',
+                background: 'linear-gradient(to bottom right, #155DFC, #0092B8)',
+                overflowX: 'visible'
             }}
         >
             <div style={{ width: '1440px', margin: '0 auto', paddingLeft: '16px', paddingRight: '16px' }}>

@@ -10,10 +10,11 @@ export function HeroSection({ locale }: HeroSectionProps) {
     const t = getTranslations(locale).hero;
     return (
         <section 
-            className="relative pb-32 overflow-hidden"
+            className="relative pb-32"
             style={{
                 background: 'linear-gradient(to bottom right, #BCDCF4, #E2F9FE, #FFFFFF)',
-                paddingTop: '120px'
+                paddingTop: '120px',
+                overflowX: 'visible'
             }}
         >
             <div className="flex flex-col items-center text-center z-10 relative" style={{ width: '1440px', margin: '0 auto', paddingLeft: '16px', paddingRight: '16px' }}>

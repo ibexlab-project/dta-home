@@ -12,8 +12,15 @@
   }
 }
 
+html {
+  overflow-x: auto;
+  min-width: 1440px;
+}
+
 body {
   color: var(--foreground);
   background: #ffffff;
   letter-spacing: normal;
+  overflow-x: auto;
+  min-width: 1440px;
 }
