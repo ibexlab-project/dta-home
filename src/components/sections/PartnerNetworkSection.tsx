@@ -8,21 +8,45 @@ import { getTranslations, type Locale } from "@/lib/get-translations";
 
 function PartnerCard({ num }: { num: number }) {
     const [imageError, setImageError] = useState(false);
+    
+    // Partner 1, 2, 3은 특정 이미지 사용
+    const getImageSrc = () => {
+        if (num === 1) return '/images/partners/partner_1.png';
+        if (num === 2) return '/images/partners/partner_2.png';
+        if (num === 3) return '/images/partners/partner_3.png';
+        return `/images/partners/partner-logo-${num}.png`;
+    };
+
+    // 각 파트너의 홈페이지 URL
+    const getPartnerUrl = () => {
+        if (num === 1) return 'https://www.hanatour.com';
+        if (num === 2) return 'https://www.ybtour.co.kr';
+        if (num === 3) return 'https://www.foodservice.or.kr/';
+        return '#';
+    };
 
     return (
-        <div
-            className="bg-white rounded-lg flex items-center justify-center border"
+        <a
+            href={getPartnerUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg flex items-center justify-center border cursor-pointer hover:shadow-md transition-shadow"
             style={{
-                borderColor: '#E5E7EB'
+                borderColor: '#E5E7EB',
+                width: '100%',
+                height: '100%',
+                textDecoration: 'none'
             }}
         >
             {!imageError ? (
-                <Image
-                    src={`/images/partners/partner-logo-${num}.png`}
+                <img
+                    src={getImageSrc()}
                     alt={`Partner ${num}`}
-                    width={150}
-                    height={80}
-                    className="object-contain opacity-60 group-hover:opacity-100 transition-opacity"
+                    style={{
+                        maxWidth: '100%',
+                        height: 'auto',
+                        display: 'block'
+                    }}
                     onError={() => setImageError(true)}
                 />
             ) : (
@@ -36,7 +60,7 @@ function PartnerCard({ num }: { num: number }) {
                     Partner {num}
                 </div>
             )}
-        </div>
+        </a>
     );
 }
 
@@ -46,7 +70,7 @@ interface PartnerNetworkSectionProps {
 
 export function PartnerNetworkSection({ locale }: PartnerNetworkSectionProps) {
     const t = getTranslations(locale).partners;
-    const partnerLogos = Array.from({ length: 8 }, (_, i) => i + 1);
+    const partnerLogos = [1, 2, 3];
 
     return (
         <section id="partners" className="bg-white" style={{ paddingTop: '128px', paddingBottom: '96px', scrollMarginTop: '80px' }}>
@@ -74,10 +98,10 @@ export function PartnerNetworkSection({ locale }: PartnerNetworkSectionProps) {
                 {/* Partner Logos Grid */}
                 <div className="flex justify-center mb-12">
                     <div
-                        className="grid grid-cols-4 gap-4 shrink-0"
+                        className="grid grid-cols-3 gap-4 shrink-0"
                         style={{
                             width: '1200px',
-                            height: '363px',
+                            height: '220px',
                             backgroundColor: '#F9FAFB',
                             borderRadius: '16px',
                             border: '1px solid #F3F4F6',

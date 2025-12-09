@@ -1,22 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Calendar } from "lucide-react";
-
-interface MediaCard {
-    image: string;
-    date: string;
-    title: string;
-    description: string;
-    imageAlt: string;
-}
-
+import { ArrowRight } from "lucide-react";
 import { getTranslations, type Locale } from "@/lib/get-translations";
 
 interface MediaCard {
     image: string;
     date: string;
     title: string;
-    description: string;
+    description: string; // HTML 형식의 자유로운 컨텐츠 (이탤릭체, bold, regular 등 포함 가능)
     imageAlt: string;
 }
 
@@ -30,9 +21,9 @@ export function MediaRoomSection({ locale, mediaCards }: MediaRoomSectionProps) 
     return (
         <section 
             id="media" 
-            className="pb-24"
+            className="pb-12"
             style={{ 
-                backgroundColor: '#F9FAFB', 
+                backgroundColor: '#FFFFFF', 
                 paddingTop: '96px', 
                 scrollMarginTop: '80px',
                 minWidth: '1440px',
@@ -64,16 +55,18 @@ export function MediaRoomSection({ locale, mediaCards }: MediaRoomSectionProps) 
                     <div
                         className="grid grid-cols-3 gap-6 shrink-0"
                         style={{
-                            width: '1200px',
-                            height: '352px'
+                            width: '1200px'
                         }}
                     >
                         {mediaCards.map((card, index) => (
-                            <div
+                            <Link
                                 key={index}
-                                className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow"
+                                href={`/${locale}/news#news-${index}`}
+                                className="bg-white rounded-xl border overflow-hidden hover:shadow-lg transition-shadow flex flex-col cursor-pointer"
+                                style={{ borderColor: '#E5E7EB' }}
                             >
-                                <div className="relative h-48 bg-gray-200">
+                                {/* 상단 이미지 */}
+                                <div className="relative w-full" style={{ aspectRatio: '16/9', minHeight: '200px' }}>
                                     <Image
                                         src={card.image}
                                         alt={card.imageAlt}
@@ -81,33 +74,41 @@ export function MediaRoomSection({ locale, mediaCards }: MediaRoomSectionProps) 
                                         className="object-cover"
                                     />
                                 </div>
-                                <div className="p-6">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <Calendar className="h-4 w-4 text-gray-500" />
-                                        <span className="text-xs text-gray-500">
-                                            {card.date.split(' ').slice(1).join(' ')}
-                                        </span>
-                                    </div>
-                                    <p 
-                                        className="font-normal"
+                                
+                                {/* 하단 컨텐츠 영역 */}
+                                <div className="p-6 flex-1 flex flex-col">
+                                    {/* 제목 */}
+                                    <h3 
+                                        className="font-bold mb-3"
                                         style={{
                                             color: '#101828',
                                             fontSize: '18px',
-                                            letterSpacing: '-0.44px'
+                                            lineHeight: '1.4'
                                         }}
                                     >
                                         {card.title}
-                                    </p>
+                                    </h3>
+                                    
+                                    {/* 내용 (HTML 형식의 자유로운 컨텐츠) */}
+                                    <div 
+                                        className="flex-1 media-card-content"
+                                        style={{
+                                            color: '#6A7282',
+                                            fontSize: '14px',
+                                            lineHeight: '1.5'
+                                        }}
+                                        dangerouslySetInnerHTML={{ __html: card.description }}
+                                    />
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
 
                 {/* See More News Link */}
-                <div className="text-center">
+                <div className="text-center mt-8">
                     <Link
-                        href="#"
+                        href={`/${locale}/news`}
                         className="inline-flex items-center gap-2 font-normal transition-colors"
                         style={{ color: '#0279D5', fontSize: '16px' }}
                     >

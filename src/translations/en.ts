@@ -6,6 +6,7 @@ export const en = {
     roadmap: "Roadmap",
     partners: "Partners",
     media: "Media",
+    news: "News",
     getStarted: "Get Started",
   },
   hero: {
@@ -26,6 +27,26 @@ export const en = {
     tourismMarketLabel: "Tourism Market",
     premiumPartnersNumber: "50+",
     premiumPartnersLabel: "Premium Partners",
+    carousel: {
+      slide1: {
+        title: "Korea's leading travel agencies, Hanatour & Yellow Balloon, open a new era of Thai tourism with DTA.",
+        description: "The infrastructure of the No.1 agency meets smart planning. Look forward to differentiated DTA-exclusive products presented with these two giant partners.",
+        buttonText: "View Travel Partnerships",
+        imagePath: "/images/hero/hero_1.png",
+      },
+      slide2: {
+        title: "Visit to Seoul Shinmun & Honam Ilbo: DTA leadership directly builds a foundation of trust.",
+        description: "DTA's CEO personally visited major Korean media outlets to discuss media commerce and future cooperation. We add technological innovation on top of the media's trust.",
+        buttonText: "Read Media News",
+        imagePath: "/images/hero/hero_2.png",
+      },
+      slide3: {
+        title: "Korea Foodservice Data (KFD) completes the digital transformation of the real economy with DTA technology.",
+        description: "KFD, the leader in the domestic foodservice data industry, selected SINODE technology. We are building a transparent data ecosystem through a USD 150,000 exclusive technology supply agreement.",
+        buttonText: "View Tech Case Study",
+        imagePath: "/images/hero/hero_3.png",
+      },
+    },
   },
   infrastructure: {
     ecosystemArchitecture: "ECOSYSTEM ARCHITECTURE",
@@ -90,22 +111,22 @@ export const en = {
     smallTitle: "Development Roadmap",
     title: "DTA's Technology Journey to 2027",
     subtitle: "Our strategic technology development plan",
-    year2025Theme: "2025 Foundation & Launch",
+    year2025Theme: "Foundation & Launch",
     year2025Highlights: [
       "Finalize DBOS engine",
       "Deploy core contracts",
       "Seed liquidity",
       "Launch first version"
     ],
-    year2026Theme: "2026 Integration & Scaling",
+    year2026Theme: "Integration & Scaling",
     year2026Highlights: [
       "DeFi protocol integrations",
       "Premium analytics suite",
       "L3 blueprint"
     ],
-    year2027Theme: "2027 Sovereignty & Leadership",
+    year2027Theme: "Sovereignty & Leadership",
     year2027Highlights: [
-      "Public L 3 mainnet",
+      "Public L3 mainnet",
       "SDK release",
       "Developer grants",
       "Full on-chain governance"
@@ -121,10 +142,13 @@ export const en = {
     becomeAPartner: "Become a Partner",
   },
   media: {
-    title1: "Media",
-    title2: "Room",
-    subtitle: "See the latest news and press coverage featuring the DTA and SIMX ecosystem.",
+    title1: "What's",
+    title2: "New",
+    subtitle: "Stay updated with our latest partnerships, media coverage, and technology innovations.",
     seeMoreNews: "See More News",
+    newsPageTitle1: "News",
+    newsPageTitle2: "& Updates",
+    newsPageSubtitle: "Discover the latest developments, partnerships, and innovations from DTA and the SIMX ecosystem.",
   },
   bottomCTA: {
     title: "Ready to Get Started?",

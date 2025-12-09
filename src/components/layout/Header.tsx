@@ -13,12 +13,20 @@ export function Header({ locale }: HeaderProps) {
     const router = useRouter();
     const pathname = usePathname();
     const currentLang = pathname.startsWith('/th') ? 'th' : 'en';
+    const isHomePage = pathname === `/${currentLang}` || pathname === '/en' || pathname === '/th';
     
     const handleLanguageChange = (newLang: 'en' | 'th') => {
         // 현재 경로에서 locale 추출
         const pathWithoutLocale = pathname.replace(/^\/(en|th)/, '') || '/';
         const newPath = `/${newLang}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
         router.push(newPath);
+    };
+
+    const getNavLink = (hash: string) => {
+        if (isHomePage) {
+            return hash;
+        }
+        return `/${currentLang}${hash}`;
     };
     return (
         <header 
@@ -45,46 +53,46 @@ export function Header({ locale }: HeaderProps) {
                 {/* Navigation */}
                 <nav className="flex items-center gap-8" style={{ whiteSpace: 'nowrap' }}>
                     <Link 
-                        href="#core-structure" 
-                        className="font-normal hover:text-primary transition-colors"
-                        style={{ fontSize: '14px', color: '#4B5563', whiteSpace: 'nowrap' }}
+                        href={getNavLink('#core-structure')} 
+                        className="hover:text-primary transition-colors"
+                        style={{ fontSize: '14px', color: '#111827', fontWeight: '600', whiteSpace: 'nowrap' }}
                     >
                         Core Structure
                     </Link>
                     <Link 
-                        href="#market-strategy" 
-                        className="font-normal hover:text-primary transition-colors"
-                        style={{ fontSize: '14px', color: '#4B5563', whiteSpace: 'nowrap' }}
+                        href={getNavLink('#market-strategy')} 
+                        className="hover:text-primary transition-colors"
+                        style={{ fontSize: '14px', color: '#111827', fontWeight: '600', whiteSpace: 'nowrap' }}
                     >
                         Market Strategy
                     </Link>
                     <Link 
-                        href="#technology" 
-                        className="font-normal hover:text-primary transition-colors"
-                        style={{ fontSize: '14px', color: '#4B5563', whiteSpace: 'nowrap' }}
+                        href={getNavLink('#technology')} 
+                        className="hover:text-primary transition-colors"
+                        style={{ fontSize: '14px', color: '#111827', fontWeight: '600', whiteSpace: 'nowrap' }}
                     >
                         Technology
                     </Link>
                     <Link 
-                        href="#roadmap" 
-                        className="font-normal hover:text-primary transition-colors"
-                        style={{ fontSize: '14px', color: '#4B5563', whiteSpace: 'nowrap' }}
+                        href={getNavLink('#roadmap')} 
+                        className="hover:text-primary transition-colors"
+                        style={{ fontSize: '14px', color: '#111827', fontWeight: '600', whiteSpace: 'nowrap' }}
                     >
                         Roadmap
                     </Link>
                     <Link 
-                        href="#partners" 
-                        className="font-normal hover:text-primary transition-colors"
-                        style={{ fontSize: '14px', color: '#4B5563', whiteSpace: 'nowrap' }}
+                        href={getNavLink('#partners')} 
+                        className="hover:text-primary transition-colors"
+                        style={{ fontSize: '14px', color: '#111827', fontWeight: '600', whiteSpace: 'nowrap' }}
                     >
                         Partners
                     </Link>
                     <Link 
-                        href="#media" 
-                        className="font-normal hover:text-primary transition-colors"
-                        style={{ fontSize: '14px', color: '#4B5563', whiteSpace: 'nowrap' }}
+                        href={`/${currentLang}/news`} 
+                        className="hover:text-primary transition-colors"
+                        style={{ fontSize: '14px', color: '#111827', fontWeight: '600', whiteSpace: 'nowrap' }}
                     >
-                        Media
+                        News
                     </Link>
                 </nav>
 

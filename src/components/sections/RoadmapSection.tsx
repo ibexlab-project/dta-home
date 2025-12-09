@@ -149,18 +149,6 @@ export function RoadmapSection({ locale }: RoadmapSectionProps) {
                         </div>
                     </div>
                 </div>
-
-                {/* View Full Roadmap Link */}
-                <div className="text-center mt-8">
-                    <Link
-                        href="#"
-                        className="inline-flex items-center gap-2 font-normal transition-colors"
-                        style={{ color: '#0279D5', fontSize: '16px' }}
-                    >
-                        {t.viewFullRoadmap}
-                        <ArrowRight className="h-4 w-4" style={{ color: '#0279D5' }} />
-                    </Link>
-                </div>
             </div>
         </section>
     );
