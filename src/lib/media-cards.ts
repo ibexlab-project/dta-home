@@ -26,7 +26,7 @@ export const getMediaCards = (locale: 'en' | 'th'): MediaCard[] => {
         imageAlt: "ซีอีโอ DTA เยือน Seoul Shinmun & Honam Ilbo"
       },
       {
-        image: "/images/media/media_3.png",
+        image: "/images/media/media_3.1.png",
         date: "15 กันยายน 2024",
         title: "ข้อมูลและเศรษฐกิจจริงรวมเป็นหนึ่งด้วยเทคโนโลยี SINODE (ความร่วมมือ KFD)",
         description: `<p><em>"ลงนามสัญญาพัฒนาเฉพาะมูลค่า 150,000 ดอลลาร์สหรัฐกับ Korea Foodservice Data (KFD)"</em></p>
@@ -59,7 +59,7 @@ export const getMediaCards = (locale: 'en' | 'th'): MediaCard[] => {
       imageAlt: "DTA CEO visits Seoul Shinmun & Honam Ilbo"
     },
     {
-      image: "/images/media/media_3.png",
+      image: "/images/media/media_3.1.png",
       date: "15 September 2024",
       title: "Data and Real Economy Become One with SINODE Technology (KFD Partnership)",
       description: `<p><em>"Signed USD 150,000 Exclusive Development Contract with Korea Foodservice Data (KFD)"</em></p>
