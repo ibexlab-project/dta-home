@@ -37,13 +37,13 @@ export default async function MobileLocaleLayout({
   const lang = locale === "th" ? "th" : "en";
 
   return (
-    <html lang={lang}>
+    <html lang={lang} className="mobile-html">
       <body
         className={clsx(
           inter.variable,
           notoSansThai.variable,
           locale === "th" ? "font-noto-sans-thai" : "font-inter",
-          "antialiased min-h-screen bg-white"
+          "mobile-body antialiased min-h-screen bg-white"
         )}
       >
         {children}

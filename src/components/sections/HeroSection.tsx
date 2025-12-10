@@ -39,7 +39,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
         >
             <div 
                 className="relative"
-                style={{ 
+                        style={{ 
                     width: '1440px', 
                     maxWidth: '100%',
                     margin: '0 auto', 
@@ -53,7 +53,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
                         <div
                             key={index}
                             className={`transition-opacity duration-700 ease-in-out ${currentSlide === index ? 'relative' : 'absolute inset-0'}`}
-                            style={{
+                        style={{ 
                                 opacity: currentSlide === index ? 1 : 0,
                                 pointerEvents: currentSlide === index ? 'auto' : 'none',
                             }}
@@ -63,45 +63,45 @@ export function HeroSection({ locale }: HeroSectionProps) {
                                 <div className="flex-1" style={{ maxWidth: '700px' }}>
                                     <h1 
                                         className="font-bold mb-6"
-                                        style={{ 
+                        style={{ 
                                             fontSize: '56px',
                                             lineHeight: '1.2',
                                             color: '#000000 ',
                                             fontWeight: 700,
                                             letterSpacing: '-0.25px'
-                                        }}
-                                    >
+                        }}
+                    >
                                         {slide.title}
                                     </h1>
                                     <p 
                                         className="mb-8 font-bold"
-                                        style={{ 
+                        style={{
                                             fontSize: '20px',
                                             lineHeight: '1.6',
                                             color: '#4A5565',
                                             fontWeight: 700,
                                             letterSpacing: '-0.25px'
-                                        }}
-                                    >
+                        }}
+                    >
                                         {slide.description}
                                     </p>
-                                    <Link
+                    <Link
                                         href={`/${locale}/news#news-${index}`}
                                         className="inline-flex items-center gap-2 px-6 py-3 text-white font-medium transition-all hover:opacity-90"
-                                        style={{
+                        style={{
                                             background: 'linear-gradient(to right, #155DFC, #0092B8)',
                                             borderRadius: '8px',
                                             fontSize: '16px'
-                                        }}
-                                    >
+                        }}
+                    >
                                         {slide.buttonText} <ArrowRight className="h-4 w-4" />
-                                    </Link>
-                                </div>
+                    </Link>
+                </div>
 
                                 {/* Right Section - Image */}
                                 <div 
                                     className="flex-1 flex items-center justify-center" 
-                                    style={{ 
+                                    style={{
                                         maxWidth: '600px', 
                                         maxHeight: '650px'
                                     }}
@@ -114,8 +114,8 @@ export function HeroSection({ locale }: HeroSectionProps) {
                                             display: 'flex',
                                             alignItems: 'center',
                                             justifyContent: 'center'
-                                        }}
-                                    >
+                                    }}
+                                >
                                         <img
                                             src={slide.imagePath}
                                             alt={slide.title}
@@ -144,7 +144,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
                             onClick={() => setCurrentSlide(index)}
                             className="transition-all duration-300"
                             aria-label={`Go to slide ${index + 1}`}
-                            style={{
+                        style={{
                                 width: currentSlide === index ? '32px' : '8px',
                                 height: '8px',
                                 borderRadius: currentSlide === index ? '4px' : '50%',

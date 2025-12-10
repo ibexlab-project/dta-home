@@ -36,6 +36,9 @@
 - 페이지 파일: `page.tsx`, `layout.tsx`, `loading.tsx`, `error.tsx`, `not-found.tsx` 사용
 - API 라우트: `route.ts` 사용
 
+### 2.4 커밋/푸시 규칙
+- 사용자가 명시적으로 요청하지 않는 한 절대 자동으로 commit/push 하지 않는다.
+
 ## 3. TypeScript 규칙
 
 ### 3.1 엄격한 타입 사용

@@ -25,46 +25,42 @@ export default async function MobileNewsPage({
     <div className="min-h-screen bg-white">
       <MobileHeader locale={locale} />
 
-      <main className="px-4 pt-4 pb-12">
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-[#0F172A] mb-2">
-            {t.title1} {t.title2}
-          </h1>
+      <main className="px-0 pt-28 pb-12">
+        <div className="mb-6 px-4">
+          <h1 className="text-2xl font-bold text-[#0F172A] mb-2">News</h1>
           <p className="text-sm text-[#4A5565] leading-6">{subtitle}</p>
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col">
           {mediaCards.map((card, index) => (
-            <article
-              key={index}
-              id={`news-${index}`}
-              className="rounded-2xl border border-[#E5E7EB] bg-white overflow-hidden"
-              style={{ scrollMarginTop: "80px" }}
-            >
-              <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
-                <Image
-                  src={card.image}
-                  alt={card.imageAlt}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-4 space-y-3">
+            <div key={index}>
+              {index > 0 && <div className="h-2 w-full bg-[#EDF0F4]" />}
+              <article
+                id={`news-${index}`}
+                style={{ scrollMarginTop: "100px" }}
+                className="space-y-4 py-8 px-4"
+              >
                 <h2 className="text-lg font-semibold text-[#0F172A] leading-6">
                   {card.title}
                 </h2>
+                <div className="w-full overflow-hidden rounded-xl bg-[#F3F4F6]">
+                  <img
+                    src={card.image}
+                    alt={card.imageAlt}
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      display: "block",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
                 <div
                   className="media-card-content text-sm text-[#111827] leading-6"
                   dangerouslySetInnerHTML={{ __html: card.description }}
                 />
-                <Link
-                  href={`/${locale}/news#news-${index}`}
-                  className="inline-flex text-sm font-semibold text-[#0279D5]"
-                >
-                  View on desktop
-                </Link>
-              </div>
-            </article>
+              </article>
+            </div>
           ))}
         </div>
       </main>
