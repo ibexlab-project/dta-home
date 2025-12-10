@@ -93,7 +93,11 @@ export function MobileHeader({ locale }: MobileHeaderProps) {
               <div key={item.href} className="relative h-full flex items-center">
                 <Link
                   href={item.href}
-                  className="font-semibold transition-colors px-0 text-[#101828] hover:text-[#155DFC]"
+                  className={`font-semibold transition-colors px-0 ${
+                    isActive 
+                      ? "text-[#101828]" 
+                      : "text-[#101828] hover:text-[#155DFC]"
+                  }`}
                   onClick={() => setActive(item.key)}
                 >
                   {item.label}
