@@ -71,7 +71,7 @@ export function MediaRoomSection({ locale, mediaCards }: MediaRoomSectionProps) 
                                         src={card.image}
                                         alt={card.imageAlt}
                                         fill
-                                        className="object-cover"
+                                        className={index === 2 ? "object-cover object-top" : "object-cover"}
                                     />
                                 </div>
                                 

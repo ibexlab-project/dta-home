@@ -44,7 +44,7 @@ export const en = {
         title: "Korea Foodservice Data (KFD) completes the digital transformation of the real economy with DTA technology.",
         description: "KFD, the leader in the domestic foodservice data industry, selected SINODE technology. We are building a transparent data ecosystem through a USD 150,000 exclusive technology supply agreement.",
         buttonText: "View Tech Case Study",
-        imagePath: "/images/hero/hero_3.png",
+        imagePath: "/images/hero/hero_3.1.png",
       },
     },
   },
