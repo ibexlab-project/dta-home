@@ -44,7 +44,7 @@ export const th = {
         title: "Korea Foodservice Data (KFD) เสร็จสมบูรณ์การเปลี่ยนแปลงดิจิทัลของเศรษฐกิจจริงด้วยเทคโนโลยี DTA",
         description: "KFD ผู้นำในอุตสาหกรรมข้อมูลบริการอาหารในประเทศ ได้เลือกเทคโนโลยี SINODE เรากำลังสร้างระบบนิเวศข้อมูลที่โปร่งใสผ่านข้อตกลงการจัดหาเทคโนโลยีเฉพาะมูลค่า 150,000 ดอลลาร์สหรัฐ",
         buttonText: "ดูกรณีศึกษาทางเทคโนโลยี",
-        imagePath: "/images/media/media_3.1.png",
+        imagePath: "/images/media/media_3.2.png",
       },
     },
   },
